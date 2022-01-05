@@ -37,11 +37,11 @@ namespace CollegeManagementSystem
             this.lbClear = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textPassword = new System.Windows.Forms.TextBox();
-            this.tbUserName = new System.Windows.Forms.TextBox();
+            this.inputPassword = new System.Windows.Forms.TextBox();
+            this.inputUsername = new System.Windows.Forms.TextBox();
             this.lbPassword = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
-            this.textConfirmPassword = new System.Windows.Forms.TextBox();
+            this.inputConfirmPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -123,21 +123,22 @@ namespace CollegeManagementSystem
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // textPassword
+            // inputPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(51, 198);
-            this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(193, 23);
-            this.textPassword.TabIndex = 15;
-            this.textPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
+            this.inputPassword.Location = new System.Drawing.Point(51, 198);
+            this.inputPassword.Name = "inputPassword";
+            this.inputPassword.Size = new System.Drawing.Size(193, 23);
+            this.inputPassword.TabIndex = 15;
+            this.inputPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
-            // tbUserName
+            // inputUsername
             // 
-            this.tbUserName.Location = new System.Drawing.Point(51, 142);
-            this.tbUserName.Name = "tbUserName";
-            this.tbUserName.PlaceholderText = "Enter your username";
-            this.tbUserName.Size = new System.Drawing.Size(193, 23);
-            this.tbUserName.TabIndex = 14;
+            this.inputUsername.Location = new System.Drawing.Point(51, 142);
+            this.inputUsername.Name = "inputUsername";
+            this.inputUsername.PlaceholderText = "Enter your username";
+            this.inputUsername.Size = new System.Drawing.Size(193, 23);
+            this.inputUsername.TabIndex = 14;
+            this.inputUsername.TextChanged += new System.EventHandler(this.btnRegister_Click);
             // 
             // lbPassword
             // 
@@ -159,12 +160,12 @@ namespace CollegeManagementSystem
             this.lbUserName.TabIndex = 11;
             this.lbUserName.Text = "Username";
             // 
-            // textConfirmPassword
+            // inputConfirmPassword
             // 
-            this.textConfirmPassword.Location = new System.Drawing.Point(51, 251);
-            this.textConfirmPassword.Name = "textConfirmPassword";
-            this.textConfirmPassword.Size = new System.Drawing.Size(193, 23);
-            this.textConfirmPassword.TabIndex = 20;
+            this.inputConfirmPassword.Location = new System.Drawing.Point(51, 251);
+            this.inputConfirmPassword.Name = "inputConfirmPassword";
+            this.inputConfirmPassword.Size = new System.Drawing.Size(193, 23);
+            this.inputConfirmPassword.TabIndex = 20;
             // 
             // label2
             // 
@@ -181,7 +182,7 @@ namespace CollegeManagementSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 360);
-            this.Controls.Add(this.textConfirmPassword);
+            this.Controls.Add(this.inputConfirmPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -189,12 +190,13 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.lbClear);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textPassword);
-            this.Controls.Add(this.tbUserName);
+            this.Controls.Add(this.inputPassword);
+            this.Controls.Add(this.inputUsername);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbUserName);
             this.Name = "Register";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.Register_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -212,11 +214,11 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label lbClear;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textPassword;
-        private System.Windows.Forms.TextBox tbUserName;
+        private System.Windows.Forms.TextBox inputPassword;
+        private System.Windows.Forms.TextBox inputUsername;
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.Label lbUserName;
-        private System.Windows.Forms.TextBox textConfirmPassword;
+        private System.Windows.Forms.TextBox inputConfirmPassword;
         private System.Windows.Forms.Label label2;
     }
 }
