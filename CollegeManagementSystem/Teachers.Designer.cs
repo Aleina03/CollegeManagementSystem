@@ -34,20 +34,20 @@ namespace CollegeManagementSystem
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbAddress = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbPhone = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dateTime1 = new System.Windows.Forms.DateTimePicker();
+            this.cbGender = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbDep = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btHome = new System.Windows.Forms.Button();
@@ -113,15 +113,15 @@ namespace CollegeManagementSystem
             this.panel2.Size = new System.Drawing.Size(1009, 18);
             this.panel2.TabIndex = 3;
             // 
-            // textBox5
+            // tbAddress
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.textBox5.Location = new System.Drawing.Point(115, 398);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(171, 19);
-            this.textBox5.TabIndex = 31;
+            this.tbAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbAddress.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbAddress.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbAddress.Location = new System.Drawing.Point(115, 398);
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(171, 19);
+            this.tbAddress.TabIndex = 31;
             // 
             // label10
             // 
@@ -145,15 +145,15 @@ namespace CollegeManagementSystem
             this.label9.TabIndex = 28;
             this.label9.Text = "Deptmt";
             // 
-            // textBox3
+            // tbPhone
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.textBox3.Location = new System.Drawing.Point(115, 319);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 19);
-            this.textBox3.TabIndex = 27;
+            this.tbPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPhone.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbPhone.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbPhone.Location = new System.Drawing.Point(115, 319);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.Size = new System.Drawing.Size(171, 19);
+            this.tbPhone.TabIndex = 27;
             // 
             // label8
             // 
@@ -177,28 +177,28 @@ namespace CollegeManagementSystem
             this.label7.TabIndex = 25;
             this.label7.Text = "Dob";
             // 
-            // dateTimePicker1
+            // dateTime1
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Location = new System.Drawing.Point(115, 268);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(171, 22);
-            this.dateTimePicker1.TabIndex = 24;
+            this.dateTime1.CalendarFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTime1.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTime1.Location = new System.Drawing.Point(115, 268);
+            this.dateTime1.Name = "dateTime1";
+            this.dateTime1.Size = new System.Drawing.Size(171, 22);
+            this.dateTime1.TabIndex = 24;
             // 
-            // comboBox1
+            // cbGender
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbGender.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbGender.ForeColor = System.Drawing.Color.SteelBlue;
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(115, 211);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(171, 26);
-            this.comboBox1.TabIndex = 23;
+            this.cbGender.Location = new System.Drawing.Point(115, 211);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(171, 26);
+            this.cbGender.TabIndex = 23;
             // 
             // label6
             // 
@@ -211,15 +211,15 @@ namespace CollegeManagementSystem
             this.label6.TabIndex = 22;
             this.label6.Text = "Gender";
             // 
-            // textBox2
+            // tbName
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.textBox2.Location = new System.Drawing.Point(115, 169);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 19);
-            this.textBox2.TabIndex = 21;
+            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbName.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbName.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbName.Location = new System.Drawing.Point(115, 169);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(171, 19);
+            this.tbName.TabIndex = 21;
             // 
             // label5
             // 
@@ -232,15 +232,15 @@ namespace CollegeManagementSystem
             this.label5.TabIndex = 20;
             this.label5.Text = "Name";
             // 
-            // textBox1
+            // tbId
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.textBox1.Location = new System.Drawing.Point(115, 126);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 19);
-            this.textBox1.TabIndex = 19;
+            this.tbId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbId.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbId.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbId.Location = new System.Drawing.Point(115, 126);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(171, 19);
+            this.tbId.TabIndex = 19;
             // 
             // label4
             // 
@@ -253,19 +253,20 @@ namespace CollegeManagementSystem
             this.label4.TabIndex = 18;
             this.label4.Text = "ID";
             // 
-            // comboBox2
+            // cbDep
             // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbDep.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbDep.ForeColor = System.Drawing.Color.SteelBlue;
+            this.cbDep.FormattingEnabled = true;
+            this.cbDep.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox2.Location = new System.Drawing.Point(115, 356);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(171, 26);
-            this.comboBox2.TabIndex = 32;
+            this.cbDep.Location = new System.Drawing.Point(115, 356);
+            this.cbDep.Name = "cbDep";
+            this.cbDep.Size = new System.Drawing.Size(171, 26);
+            this.cbDep.TabIndex = 32;
+            this.cbDep.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -298,6 +299,7 @@ namespace CollegeManagementSystem
             this.btHome.TabIndex = 82;
             this.btHome.Text = "Home";
             this.btHome.UseVisualStyleBackColor = false;
+            this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
             // btDelete
             // 
@@ -310,6 +312,7 @@ namespace CollegeManagementSystem
             this.btDelete.TabIndex = 81;
             this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = false;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // btEdit
             // 
@@ -346,19 +349,19 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.cbDep);
+            this.Controls.Add(this.tbAddress);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbPhone);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dateTime1);
+            this.Controls.Add(this.cbGender);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbName);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -380,20 +383,20 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbAddress;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbPhone;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateTime1;
+        private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbDep;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btHome;

@@ -54,7 +54,7 @@ namespace CollegeManagementSystem
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(302, 55);
+            this.panel2.Size = new System.Drawing.Size(284, 55);
             this.panel2.TabIndex = 10;
             // 
             // label1
@@ -62,7 +62,7 @@ namespace CollegeManagementSystem
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(125, 9);
+            this.label1.Location = new System.Drawing.Point(116, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 29);
             this.label1.TabIndex = 2;
@@ -72,9 +72,9 @@ namespace CollegeManagementSystem
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(302, 0);
+            this.panel1.Location = new System.Drawing.Point(284, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(271, 340);
+            this.panel1.Size = new System.Drawing.Size(289, 340);
             this.panel1.TabIndex = 9;
             // 
             // linkLabel1
@@ -117,7 +117,7 @@ namespace CollegeManagementSystem
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(125, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(116, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(54, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -171,7 +171,7 @@ namespace CollegeManagementSystem
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(51, 219);
+            this.label2.Location = new System.Drawing.Point(51, 220);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 14);
             this.label2.TabIndex = 19;

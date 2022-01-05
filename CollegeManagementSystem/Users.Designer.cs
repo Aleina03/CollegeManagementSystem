@@ -199,6 +199,7 @@ namespace CollegeManagementSystem
             this.btHome.TabIndex = 82;
             this.btHome.Text = "Home";
             this.btHome.UseVisualStyleBackColor = false;
+            this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
             // btDelete
             // 
@@ -211,6 +212,7 @@ namespace CollegeManagementSystem
             this.btDelete.TabIndex = 81;
             this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = false;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // btEdit
             // 
@@ -235,6 +237,7 @@ namespace CollegeManagementSystem
             this.btAdd.TabIndex = 79;
             this.btAdd.Text = "Add";
             this.btAdd.UseVisualStyleBackColor = false;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // Users
             // 

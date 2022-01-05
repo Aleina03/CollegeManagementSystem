@@ -26,5 +26,45 @@ namespace CollegeManagementSystem
         {
 
         }
+
+        private void btStudent_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Student studentForm = new Student();
+            studentForm.Show();
+        }
+
+        private void btTeacher_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Teachers teachersForm = new Teachers();
+            teachersForm.Show();
+        }
+
+        private void btDepartment_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Department departmentForm = new Department();
+            departmentForm.Show();
+        }
+
+        private void btFees_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Fees feesForm = new Fees();
+            feesForm.Show();
+        }
+
+        private void btUsers_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Users usersForm = new Users();
+            usersForm.Show();
+        }
+
+        private void btLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

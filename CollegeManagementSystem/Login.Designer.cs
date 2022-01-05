@@ -49,9 +49,9 @@ namespace CollegeManagementSystem
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(254, 0);
+            this.panel1.Location = new System.Drawing.Point(283, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 330);
+            this.panel1.Size = new System.Drawing.Size(291, 340);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -62,7 +62,7 @@ namespace CollegeManagementSystem
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(254, 55);
+            this.panel2.Size = new System.Drawing.Size(283, 55);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -71,7 +71,7 @@ namespace CollegeManagementSystem
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(97, 12);
+            this.label1.Location = new System.Drawing.Point(113, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 29);
             this.label1.TabIndex = 2;
@@ -120,7 +120,7 @@ namespace CollegeManagementSystem
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(97, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(113, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(54, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,7 +133,7 @@ namespace CollegeManagementSystem
             this.btnLogin.BackColor = System.Drawing.Color.SteelBlue;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(30, 251);
+            this.btnLogin.Location = new System.Drawing.Point(30, 260);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(193, 33);
             this.btnLogin.TabIndex = 7;
@@ -156,6 +156,7 @@ namespace CollegeManagementSystem
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.SteelBlue;
             this.linkLabel1.Location = new System.Drawing.Point(175, 296);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(48, 15);
@@ -168,7 +169,7 @@ namespace CollegeManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 330);
+            this.ClientSize = new System.Drawing.Size(574, 340);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.lbClear);
             this.Controls.Add(this.btnLogin);
@@ -183,6 +184,7 @@ namespace CollegeManagementSystem
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

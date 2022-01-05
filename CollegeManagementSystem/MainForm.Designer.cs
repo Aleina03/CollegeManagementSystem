@@ -89,6 +89,7 @@ namespace CollegeManagementSystem
             this.btStudent.TabIndex = 1;
             this.btStudent.Text = "Students";
             this.btStudent.UseVisualStyleBackColor = false;
+            this.btStudent.Click += new System.EventHandler(this.btStudent_Click);
             // 
             // btTeacher
             // 
@@ -102,6 +103,7 @@ namespace CollegeManagementSystem
             this.btTeacher.TabIndex = 2;
             this.btTeacher.Text = "Teachers";
             this.btTeacher.UseVisualStyleBackColor = false;
+            this.btTeacher.Click += new System.EventHandler(this.btTeacher_Click);
             // 
             // btDepartment
             // 
@@ -115,6 +117,7 @@ namespace CollegeManagementSystem
             this.btDepartment.TabIndex = 3;
             this.btDepartment.Text = "Departments";
             this.btDepartment.UseVisualStyleBackColor = false;
+            this.btDepartment.Click += new System.EventHandler(this.btDepartment_Click);
             // 
             // btFees
             // 
@@ -128,6 +131,7 @@ namespace CollegeManagementSystem
             this.btFees.TabIndex = 4;
             this.btFees.Text = "Fees";
             this.btFees.UseVisualStyleBackColor = false;
+            this.btFees.Click += new System.EventHandler(this.btFees_Click);
             // 
             // btUsers
             // 
@@ -141,6 +145,7 @@ namespace CollegeManagementSystem
             this.btUsers.TabIndex = 5;
             this.btUsers.Text = "Users";
             this.btUsers.UseVisualStyleBackColor = false;
+            this.btUsers.Click += new System.EventHandler(this.btUsers_Click);
             // 
             // btLogout
             // 
@@ -153,6 +158,7 @@ namespace CollegeManagementSystem
             this.btLogout.TabIndex = 6;
             this.btLogout.Text = "Logout";
             this.btLogout.UseVisualStyleBackColor = false;
+            this.btLogout.Click += new System.EventHandler(this.btLogout_Click);
             // 
             // MainForm
             // 

@@ -21,5 +21,19 @@ namespace CollegeManagementSystem
         {
             Application.Exit();
         }
+
+        private void btHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            tbNum.Text = "";
+            tbName.Text = "";
+            TbAm.Text = "";
+        }
     }
 }

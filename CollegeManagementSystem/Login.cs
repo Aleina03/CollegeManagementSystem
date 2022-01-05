@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CollegeManagementSystem
 {
@@ -70,12 +71,20 @@ namespace CollegeManagementSystem
 
         private void lbClear_Click(object sender, EventArgs e)
         {
-
+            tbUserName.Text = "";
+            tbPassword.Text = "";
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        SqlConnection dbconnection;
+        private void Login_Load(object sender, EventArgs e)
+        {
+            dbconnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\NELLY\DOCUMENTS\COLLEGEDB.MDF;Integrated Security=True");
+            dbconnection.Open();
         }
     }
 }

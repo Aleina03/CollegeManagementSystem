@@ -40,11 +40,11 @@ namespace CollegeManagementSystem {
         private System.Windows.Forms.Button btDelete;
         private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btAdd;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbDur;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbDesc;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label11;
