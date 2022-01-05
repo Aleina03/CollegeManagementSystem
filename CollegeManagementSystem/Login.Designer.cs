@@ -100,9 +100,9 @@ namespace CollegeManagementSystem
             // 
             this.tbUserName.Location = new System.Drawing.Point(30, 153);
             this.tbUserName.Name = "tbUserName";
+            this.tbUserName.PlaceholderText = "Enter your username";
             this.tbUserName.Size = new System.Drawing.Size(193, 23);
             this.tbUserName.TabIndex = 4;
-            this.tbUserName.Text = "W";
             this.tbUserName.TextChanged += new System.EventHandler(this.tbUserName_TextChanged);
             // 
             // tbPassword

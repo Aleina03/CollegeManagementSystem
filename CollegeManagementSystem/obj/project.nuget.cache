@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4mTFR1cCQ++4fbbNwqeGTIxfb6/PoDJiBtDTAcvD1HYKaDHvMIDW3VZQp8kB87jQKRIxu0gZWeWzxCzq3qCK7w==",
+  "dgSpecHash": "J2GcEDVHl8w45AYqPN4/RF4YybinNg/0kWin5z3Gx94F1we20fZC3pHLqem5g8fkH/GEl2lPsCOZcnyYJwb1MA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nelly\\Desktop\\Aleina\\VS project\\CollegeManagementSystem\\CollegeManagementSystem\\CollegeManagementSystem.csproj",
+  "projectFilePath": "C:\\Users\\Nelly\\Source\\Repos\\Aleina03\\CollegeManagementSystem\\CollegeManagementSystem\\CollegeManagementSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nelly\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Nelly\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

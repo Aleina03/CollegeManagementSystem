@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nelly\\Desktop\\Aleina\\VS project\\CollegeManagementSystem\\CollegeManagementSystem\\CollegeManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Nelly\\Source\\Repos\\Aleina03\\CollegeManagementSystem\\CollegeManagementSystem\\CollegeManagementSystem.csproj",
       "projectName": "CollegeManagementSystem",
-      "projectPath": "C:\\Users\\Nelly\\Desktop\\Aleina\\VS project\\CollegeManagementSystem\\CollegeManagementSystem\\CollegeManagementSystem.csproj",
+      "projectPath": "C:\\Users\\Nelly\\Source\\Repos\\Aleina03\\CollegeManagementSystem\\CollegeManagementSystem\\CollegeManagementSystem.csproj",
       "packagesPath": "C:\\Users\\Nelly\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nelly\\Desktop\\Aleina\\VS project\\CollegeManagementSystem\\CollegeManagementSystem\\obj\\",
+      "outputPath": "C:\\Users\\Nelly\\Source\\Repos\\Aleina03\\CollegeManagementSystem\\CollegeManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nelly\\AppData\\Roaming\\NuGet\\NuGet.Config",
