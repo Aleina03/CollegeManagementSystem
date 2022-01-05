@@ -54,10 +54,14 @@ namespace CollegeManagementSystem
                     {
                         dr.Close();
 
-                        cmd = new SqlCommand("INSERT INTO UserTbl (UserName, Password) Values(' + inputUsername.Text + ', ' + inputPassword.Text + ')", this.dbconnection);
+                        cmd = new SqlCommand("INSERT INTO UserTbl (UserName, Password) Values('" + inputUsername.Text + "', '" + inputPassword.Text + "')", this.dbconnection);
                         cmd.ExecuteNonQuery();      
 
                         MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
+
+
+                    
                     }
                 }
                 else
