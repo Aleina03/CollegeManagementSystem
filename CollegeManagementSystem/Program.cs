@@ -17,7 +17,7 @@ namespace CollegeManagementSystem
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            dApplication.Run(new Form1());
+            Application.Run(new Form1());
         }
     }
 }

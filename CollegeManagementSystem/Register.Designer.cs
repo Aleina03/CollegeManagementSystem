@@ -129,7 +129,7 @@ namespace CollegeManagementSystem
             this.inputPassword.Name = "inputPassword";
             this.inputPassword.Size = new System.Drawing.Size(193, 23);
             this.inputPassword.TabIndex = 15;
-            this.inputPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
+           
             // 
             // inputUsername
             // 
@@ -138,7 +138,7 @@ namespace CollegeManagementSystem
             this.inputUsername.PlaceholderText = "Enter your username";
             this.inputUsername.Size = new System.Drawing.Size(193, 23);
             this.inputUsername.TabIndex = 14;
-            this.inputUsername.TextChanged += new System.EventHandler(this.btnRegister_Click);
+           
             // 
             // lbPassword
             // 

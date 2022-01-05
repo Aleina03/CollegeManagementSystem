@@ -36,11 +36,6 @@ namespace CollegeManagementSystem
 
         }
 
-        private void tbPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRegister_Click(object sender, EventArgs e)
         {
 
