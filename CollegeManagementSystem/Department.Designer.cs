@@ -36,9 +36,9 @@ namespace CollegeManagementSystem {
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btHome;
+        private System.Windows.Forms.Button btDelete;
+        private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;

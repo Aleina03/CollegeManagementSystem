@@ -24,9 +24,9 @@ namespace CollegeManagementSystem
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btHome = new System.Windows.Forms.Button();
+            this.btDelete = new System.Windows.Forms.Button();
+            this.btEdit = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -94,48 +94,48 @@ namespace CollegeManagementSystem
             this.panel2.Size = new System.Drawing.Size(1009, 18);
             this.panel2.TabIndex = 4;
             // 
-            // button3
+            // btHome
             // 
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(177, 473);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 29);
-            this.button3.TabIndex = 78;
-            this.button3.Text = "Home";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btHome.BackColor = System.Drawing.Color.SteelBlue;
+            this.btHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btHome.ForeColor = System.Drawing.Color.White;
+            this.btHome.Location = new System.Drawing.Point(194, 474);
+            this.btHome.Name = "btHome";
+            this.btHome.Size = new System.Drawing.Size(108, 29);
+            this.btHome.TabIndex = 78;
+            this.btHome.Text = "Home";
+            this.btHome.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btDelete
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(44, 473);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 29);
-            this.button2.TabIndex = 77;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDelete.ForeColor = System.Drawing.Color.White;
+            this.btDelete.Location = new System.Drawing.Point(61, 474);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(108, 29);
+            this.btDelete.TabIndex = 77;
+            this.btDelete.Text = "Delete";
+            this.btDelete.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btEdit
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(177, 438);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 29);
-            this.button1.TabIndex = 76;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEdit.ForeColor = System.Drawing.Color.White;
+            this.btEdit.Location = new System.Drawing.Point(194, 439);
+            this.btEdit.Name = "btEdit";
+            this.btEdit.Size = new System.Drawing.Size(108, 29);
+            this.btEdit.TabIndex = 76;
+            this.btEdit.Text = "Edit";
+            this.btEdit.UseVisualStyleBackColor = false;
             // 
             // btAdd
             // 
             this.btAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdd.ForeColor = System.Drawing.Color.White;
-            this.btAdd.Location = new System.Drawing.Point(44, 438);
+            this.btAdd.Location = new System.Drawing.Point(61, 439);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(108, 29);
             this.btAdd.TabIndex = 75;
@@ -230,9 +230,9 @@ namespace CollegeManagementSystem
             this.ClientSize = new System.Drawing.Size(1009, 572);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btHome);
+            this.Controls.Add(this.btDelete);
+            this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label6);

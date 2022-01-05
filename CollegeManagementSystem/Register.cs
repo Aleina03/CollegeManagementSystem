@@ -33,7 +33,9 @@ namespace CollegeManagementSystem
 
         private void lbClear_Click(object sender, EventArgs e)
         {
-
+            inputUsername.Text = "";
+            inputPassword.Text = "";
+            inputConfirmPassword.Text = "";
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -76,5 +78,9 @@ namespace CollegeManagementSystem
 
         }
 
+        private void inputUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

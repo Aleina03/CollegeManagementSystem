@@ -54,7 +54,7 @@ namespace CollegeManagementSystem
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(309, 55);
+            this.panel2.Size = new System.Drawing.Size(302, 55);
             this.panel2.TabIndex = 10;
             // 
             // label1
@@ -72,15 +72,16 @@ namespace CollegeManagementSystem
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(309, 0);
+            this.panel1.Location = new System.Drawing.Point(302, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 360);
+            this.panel1.Size = new System.Drawing.Size(271, 340);
             this.panel1.TabIndex = 9;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(227, 336);
+            this.linkLabel1.LinkColor = System.Drawing.Color.SteelBlue;
+            this.linkLabel1.Location = new System.Drawing.Point(168, 318);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(76, 15);
             this.linkLabel1.TabIndex = 18;
@@ -93,7 +94,7 @@ namespace CollegeManagementSystem
             this.lbClear.AutoSize = true;
             this.lbClear.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbClear.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbClear.Location = new System.Drawing.Point(30, 336);
+            this.lbClear.Location = new System.Drawing.Point(51, 319);
             this.lbClear.Name = "lbClear";
             this.lbClear.Size = new System.Drawing.Size(34, 14);
             this.lbClear.TabIndex = 12;
@@ -105,7 +106,7 @@ namespace CollegeManagementSystem
             this.btnRegister.BackColor = System.Drawing.Color.SteelBlue;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(51, 291);
+            this.btnRegister.Location = new System.Drawing.Point(51, 275);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(193, 33);
             this.btnRegister.TabIndex = 17;
@@ -125,26 +126,25 @@ namespace CollegeManagementSystem
             // 
             // inputPassword
             // 
-            this.inputPassword.Location = new System.Drawing.Point(51, 198);
+            this.inputPassword.Location = new System.Drawing.Point(51, 183);
             this.inputPassword.Name = "inputPassword";
             this.inputPassword.Size = new System.Drawing.Size(193, 23);
             this.inputPassword.TabIndex = 15;
-           
             // 
             // inputUsername
             // 
-            this.inputUsername.Location = new System.Drawing.Point(51, 142);
+            this.inputUsername.Location = new System.Drawing.Point(51, 133);
             this.inputUsername.Name = "inputUsername";
             this.inputUsername.PlaceholderText = "Enter your username";
             this.inputUsername.Size = new System.Drawing.Size(193, 23);
             this.inputUsername.TabIndex = 14;
-           
+            this.inputUsername.TextChanged += new System.EventHandler(this.inputUsername_TextChanged);
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
             this.lbPassword.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbPassword.Location = new System.Drawing.Point(51, 181);
+            this.lbPassword.Location = new System.Drawing.Point(51, 166);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(59, 14);
             this.lbPassword.TabIndex = 13;
@@ -154,7 +154,7 @@ namespace CollegeManagementSystem
             // 
             this.lbUserName.AutoSize = true;
             this.lbUserName.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbUserName.Location = new System.Drawing.Point(49, 125);
+            this.lbUserName.Location = new System.Drawing.Point(49, 115);
             this.lbUserName.Name = "lbUserName";
             this.lbUserName.Size = new System.Drawing.Size(61, 14);
             this.lbUserName.TabIndex = 11;
@@ -162,7 +162,7 @@ namespace CollegeManagementSystem
             // 
             // inputConfirmPassword
             // 
-            this.inputConfirmPassword.Location = new System.Drawing.Point(51, 251);
+            this.inputConfirmPassword.Location = new System.Drawing.Point(51, 237);
             this.inputConfirmPassword.Name = "inputConfirmPassword";
             this.inputConfirmPassword.Size = new System.Drawing.Size(193, 23);
             this.inputConfirmPassword.TabIndex = 20;
@@ -171,7 +171,7 @@ namespace CollegeManagementSystem
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(54, 234);
+            this.label2.Location = new System.Drawing.Point(51, 219);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 14);
             this.label2.TabIndex = 19;
@@ -181,7 +181,7 @@ namespace CollegeManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 360);
+            this.ClientSize = new System.Drawing.Size(573, 340);
             this.Controls.Add(this.inputConfirmPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
@@ -194,6 +194,7 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.inputUsername);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbUserName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Register";
             this.Text = "Register";
             this.Load += new System.EventHandler(this.Register_Load);
