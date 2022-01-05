@@ -27,15 +27,36 @@ namespace CollegeManagementSystem
 
         private void Users_Load(object sender, EventArgs e)
         {
-
+            populate();
         }
 
-        private void btLogout_Click(object sender, EventArgs e)
+        private void populate()
         {
-
+            myconn.Open();
+            string querry = "select + fromUserTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(querry, myconn);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            UserDGV.DataSource = ds.Tables[0];
+            myconn.Close();
         }
 
-        private void btLogout_Click_1(object sender, EventArgs e)
+        private void btHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.Show(); 
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            UIdTb.Text = "";
+            UNameTb.Text = "";
+            UPasswordTb.Text = "";
+        }
+
+        private void btAdd_Click(object sender, EventArgs e)
         {
             try
             {
@@ -56,26 +77,6 @@ namespace CollegeManagementSystem
             {
                 MessageBox.Show("Something Went Wrong");
             }
-        
-        }
-
-        private void btHome_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.Show(); 
-        }
-
-        private void btDelete_Click(object sender, EventArgs e)
-        {
-            UIdTb.Text = "";
-            UNameTb.Text = "";
-            UPasswordTb.Text = "";
-        }
-
-        private void btAdd_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -286,6 +286,7 @@ namespace CollegeManagementSystem
             this.btAdd.TabIndex = 79;
             this.btAdd.Text = "Add";
             this.btAdd.UseVisualStyleBackColor = false;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // Fees
             // 

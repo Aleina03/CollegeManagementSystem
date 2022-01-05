@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace CollegeManagementSystem
 {
@@ -16,6 +18,7 @@ namespace CollegeManagementSystem
         {
             InitializeComponent();
         }
+        SqlConnection myconn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelly\Documents\Collegedb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void Student_Load(object sender, EventArgs e)
         {
@@ -39,12 +42,36 @@ namespace CollegeManagementSystem
             tbId.Text = "";
             tbName.Text = "";
             tbPhone.Text = "";
+            tbDeptmt.Text = "";
             tbFees.Text = "";
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tbId.Text == "" || tbName.Text == "" || tbPhone.Text == "")
+                {
+                    MessageBox.Show("Missing Information");
+                }
+                else
+                {
+                    myconn.Open();
+                    SqlCommand cmd = new SqlCommand("Insert into StudentTbl values(" + tbId.Text + ",'" + tbName.Text + "','" + tbPhone.Text + "')", myconn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Student Successfully Added");
+                    myconn.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Something Went Wrong");
+            }
         }
     }
 }

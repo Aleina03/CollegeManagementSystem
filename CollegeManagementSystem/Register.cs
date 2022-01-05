@@ -76,6 +76,9 @@ namespace CollegeManagementSystem
                 MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
         }
 
         private void inputUsername_TextChanged(object sender, EventArgs e)

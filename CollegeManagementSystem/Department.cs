@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace CollegeManagementSystem
 {
@@ -16,6 +18,7 @@ namespace CollegeManagementSystem
         {
             InitializeComponent();
         }
+        SqlConnection myconn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelly\Documents\Collegedb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void InitializeComponent()
         {
@@ -143,6 +146,7 @@ namespace CollegeManagementSystem
             this.btAdd.TabIndex = 75;
             this.btAdd.Text = "Add";
             this.btAdd.UseVisualStyleBackColor = false;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // tbDur
             // 
@@ -273,6 +277,29 @@ namespace CollegeManagementSystem
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tbName.Text == "" || tbDesc.Text == "" || tbDur.Text == "")
+                {
+                    MessageBox.Show("Missing Information");
+                }
+                else
+                {
+                    myconn.Open();
+                    SqlCommand cmd = new SqlCommand("Insert into UserTbl values(" + tbName.Text + ",'" + tbDesc.Text + "','" + tbDur.Text + "')", myconn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Department Successfully Added");
+                    myconn.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Something Went Wrong");
+            }
         }
     }
 }
