@@ -38,6 +38,43 @@ namespace CollegeManagementSystem
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
+            Register registerForm = new Register();
+            registerForm.Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbUserName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

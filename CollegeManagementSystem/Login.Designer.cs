@@ -53,6 +53,7 @@ namespace CollegeManagementSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 330);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -63,6 +64,7 @@ namespace CollegeManagementSystem
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(254, 55);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label1
             // 
@@ -82,9 +84,10 @@ namespace CollegeManagementSystem
             this.lbUserName.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbUserName.Location = new System.Drawing.Point(30, 132);
             this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(62, 14);
+            this.lbUserName.Size = new System.Drawing.Size(61, 14);
             this.lbUserName.TabIndex = 2;
-            this.lbUserName.Text = "UserName";
+            this.lbUserName.Text = "Username";
+            this.lbUserName.Click += new System.EventHandler(this.lbUserName_Click);
             // 
             // lbPassword
             // 
@@ -95,6 +98,7 @@ namespace CollegeManagementSystem
             this.lbPassword.Size = new System.Drawing.Size(59, 14);
             this.lbPassword.TabIndex = 3;
             this.lbPassword.Text = "Password";
+            this.lbPassword.Click += new System.EventHandler(this.lbPassword_Click);
             // 
             // tbUserName
             // 
@@ -111,6 +115,7 @@ namespace CollegeManagementSystem
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(193, 23);
             this.tbPassword.TabIndex = 5;
+            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
             // pictureBox1
             // 
@@ -121,6 +126,7 @@ namespace CollegeManagementSystem
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnLogin
             // 
@@ -145,6 +151,7 @@ namespace CollegeManagementSystem
             this.lbClear.Size = new System.Drawing.Size(34, 14);
             this.lbClear.TabIndex = 3;
             this.lbClear.Text = "Clear";
+            this.lbClear.Click += new System.EventHandler(this.lbClear_Click);
             // 
             // linkLabel1
             // 
