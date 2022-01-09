@@ -45,12 +45,6 @@ namespace CollegeManagementSystem
             this.label4 = new System.Windows.Forms.Label();
             this.tbFN = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cbMarks = new System.Windows.Forms.ComboBox();
-            this.cbSub = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbAmount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -173,7 +167,7 @@ namespace CollegeManagementSystem
             this.UNameTb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UNameTb.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.UNameTb.ForeColor = System.Drawing.Color.SteelBlue;
-            this.UNameTb.Location = new System.Drawing.Point(123, 197);
+            this.UNameTb.Location = new System.Drawing.Point(123, 207);
             this.UNameTb.Name = "UNameTb";
             this.UNameTb.Size = new System.Drawing.Size(171, 19);
             this.UNameTb.TabIndex = 94;
@@ -183,7 +177,7 @@ namespace CollegeManagementSystem
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(36, 197);
+            this.label5.Location = new System.Drawing.Point(36, 207);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 19);
             this.label5.TabIndex = 93;
@@ -231,100 +225,11 @@ namespace CollegeManagementSystem
             this.label8.TabIndex = 99;
             this.label8.Text = "Faculty №";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label7.Location = new System.Drawing.Point(53, 242);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 19);
-            this.label7.TabIndex = 102;
-            this.label7.Text = "Period";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Location = new System.Drawing.Point(123, 239);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(171, 22);
-            this.dateTimePicker1.TabIndex = 101;
-            // 
-            // cbMarks
-            // 
-            this.cbMarks.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbMarks.FormattingEnabled = true;
-            this.cbMarks.Items.AddRange(new object[] {
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
-            this.cbMarks.Location = new System.Drawing.Point(122, 331);
-            this.cbMarks.Name = "cbMarks";
-            this.cbMarks.Size = new System.Drawing.Size(172, 22);
-            this.cbMarks.TabIndex = 106;
-            // 
-            // cbSub
-            // 
-            this.cbSub.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbSub.FormattingEnabled = true;
-            this.cbSub.Items.AddRange(new object[] {
-            "Information Technology",
-            "Introduction to programming",
-            "Linear algebra and analytical geometry",
-            "Creating a GPI (C #)",
-            "Students will receive an invitation in their university emails",
-            "Mathematics software systems",
-            "English",
-            "Geometric design",
-            "Administration of dynamic web systems",
-            "Software technologies 1",
-            "Computer networks and communications",
-            "Software technologies 2",
-            "Web Creation and processing of vector images",
-            "Framework systems for web programming",
-            "Information technology on the Internet",
-            "Business information systems"});
-            this.cbSub.Location = new System.Drawing.Point(122, 286);
-            this.cbSub.Name = "cbSub";
-            this.cbSub.Size = new System.Drawing.Size(172, 22);
-            this.cbSub.TabIndex = 105;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(53, 290);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 19);
-            this.label6.TabIndex = 104;
-            this.label6.Text = "Subject";
-            // 
-            // tbAmount
-            // 
-            this.tbAmount.AutoSize = true;
-            this.tbAmount.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbAmount.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbAmount.Location = new System.Drawing.Point(53, 334);
-            this.tbAmount.Name = "tbAmount";
-            this.tbAmount.Size = new System.Drawing.Size(45, 19);
-            this.tbAmount.TabIndex = 103;
-            this.tbAmount.Text = "Mark";
-            // 
             // Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(993, 533);
-            this.Controls.Add(this.cbMarks);
-            this.Controls.Add(this.cbSub);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.tbAmount);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.tbFN);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.UNameTb);
@@ -367,11 +272,5 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbFN;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox cbMarks;
-        private System.Windows.Forms.ComboBox cbSub;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label tbAmount;
     }
 }
