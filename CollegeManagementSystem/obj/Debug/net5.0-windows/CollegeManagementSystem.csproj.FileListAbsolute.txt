@@ -63,4 +63,5 @@ C:\Users\Nelly\Source\Repos\Aleina03\CollegeManagementSystem\CollegeManagementSy
 C:\Users\Nelly\Source\Repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem.pdb
 C:\Users\Nelly\Source\Repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem.genruntimeconfig.cache
 C:\Users\Nelly\Source\Repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem.csproj.AssemblyReference.cache
-C:\Users\Nelly\source\repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem.Marks.resources
+C:\Users\Nelly\source\repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem..resources
+C:\Users\Nelly\source\repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem.Registration.resources

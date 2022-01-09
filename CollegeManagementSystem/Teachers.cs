@@ -37,7 +37,7 @@ namespace CollegeManagementSystem
             tbId.Text = "";
             tbName.Text = "";
             tbPhone.Text = "";
-            tbAddress.Text = "";
+            //tbAddress.Text = "";
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)

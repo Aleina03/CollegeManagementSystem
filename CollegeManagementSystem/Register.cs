@@ -12,13 +12,20 @@ using System.Data.SqlClient;
 
 namespace CollegeManagementSystem
 {
-    public partial class Register : Form
+    public partial class Register: Form 
     {
         public Register()
         {
             InitializeComponent();
         }
-        SqlConnection myconn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelly\Documents\Collegedb.mdf;Integrated Security=True;Connect Timeout=30");
+
+        SqlConnection dbconnection;
+        private void Register_Load(object sender, EventArgs e)
+        {
+
+            dbconnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\NELLY\DOCUMENTS\COLLEGEDB.MDF;Integrated Security=True");
+            dbconnection.Open(); 
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -49,11 +56,11 @@ namespace CollegeManagementSystem
                 }
                 else
                 {
-                    myconn.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into TeacherTbl values(" + tbFn.Text + ",'" + tbName.Text + "','" + tbMark.Text + "')", myconn);
+                    dbconnection.Open();
+                    SqlCommand cmd = new SqlCommand("Insert into TeacherTbl values(" + tbFn.Text + ",'" + tbName.Text + "','" + tbMark.Text + "')", dbconnection);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Fees Successfully Added");
-                    myconn.Close();
+                    dbconnection.Close();
                 }
             }
             catch
@@ -61,5 +68,7 @@ namespace CollegeManagementSystem
                 MessageBox.Show("Something Went Wrong");
             }
         }
+
+    
     }
 }
