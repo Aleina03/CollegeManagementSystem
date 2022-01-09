@@ -44,8 +44,9 @@ namespace CollegeManagementSystem
             this.panel2 = new System.Windows.Forms.Panel();
             this.btHome = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
-            this.btEdit = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
+            this.cbRole = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserDGV)).BeginInit();
             this.SuspendLayout();
@@ -132,7 +133,7 @@ namespace CollegeManagementSystem
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(43, 166);
+            this.label5.Location = new System.Drawing.Point(43, 167);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 19);
             this.label5.TabIndex = 57;
@@ -153,7 +154,7 @@ namespace CollegeManagementSystem
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label4.Location = new System.Drawing.Point(43, 122);
+            this.label4.Location = new System.Drawing.Point(43, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(24, 19);
             this.label4.TabIndex = 55;
@@ -206,7 +207,7 @@ namespace CollegeManagementSystem
             this.btDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDelete.ForeColor = System.Drawing.Color.White;
-            this.btDelete.Location = new System.Drawing.Point(60, 474);
+            this.btDelete.Location = new System.Drawing.Point(193, 431);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(108, 29);
             this.btDelete.TabIndex = 81;
@@ -214,24 +215,12 @@ namespace CollegeManagementSystem
             this.btDelete.UseVisualStyleBackColor = false;
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
-            // btEdit
-            // 
-            this.btEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btEdit.ForeColor = System.Drawing.Color.White;
-            this.btEdit.Location = new System.Drawing.Point(193, 439);
-            this.btEdit.Name = "btEdit";
-            this.btEdit.Size = new System.Drawing.Size(108, 29);
-            this.btEdit.TabIndex = 80;
-            this.btEdit.Text = "Edit";
-            this.btEdit.UseVisualStyleBackColor = false;
-            // 
             // btAdd
             // 
             this.btAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdd.ForeColor = System.Drawing.Color.White;
-            this.btAdd.Location = new System.Drawing.Point(60, 439);
+            this.btAdd.Location = new System.Drawing.Point(193, 389);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(108, 29);
             this.btAdd.TabIndex = 79;
@@ -239,14 +228,40 @@ namespace CollegeManagementSystem
             this.btAdd.UseVisualStyleBackColor = false;
             this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
+            // cbRole
+            // 
+            this.cbRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbRole.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbRole.ForeColor = System.Drawing.Color.SteelBlue;
+            this.cbRole.FormattingEnabled = true;
+            this.cbRole.Items.AddRange(new object[] {
+            "Teacher",
+            "Student"});
+            this.cbRole.Location = new System.Drawing.Point(130, 257);
+            this.cbRole.Name = "cbRole";
+            this.cbRole.Size = new System.Drawing.Size(171, 26);
+            this.cbRole.TabIndex = 84;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label7.Location = new System.Drawing.Point(43, 259);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 19);
+            this.label7.TabIndex = 83;
+            this.label7.Text = "Role";
+            // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 572);
+            this.Controls.Add(this.cbRole);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btHome);
             this.Controls.Add(this.btDelete);
-            this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.UserDGV);
@@ -287,7 +302,8 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btDelete;
-        private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btAdd;
+        private System.Windows.Forms.ComboBox cbRole;
+        private System.Windows.Forms.Label label7;
     }
 }

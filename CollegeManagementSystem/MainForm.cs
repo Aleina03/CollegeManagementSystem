@@ -51,7 +51,7 @@ namespace CollegeManagementSystem
         private void btFees_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Fees feesForm = new Fees();
+            Marks feesForm = new Marks();
             feesForm.Show();
         }
 

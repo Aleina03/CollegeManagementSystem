@@ -32,14 +32,16 @@ namespace CollegeManagementSystem
 
         private void populate()
         {
-            myconn.Open();
-            string querry = "select + fromUserTbl";
-            SqlDataAdapter sda = new SqlDataAdapter(querry, myconn);
-            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
-            var ds = new DataSet();
-            sda.Fill(ds);
-            UserDGV.DataSource = ds.Tables[0];
-            myconn.Close();
+
+            /* myconn.Open();
+             string querry = "select + fromUserTbl";
+             SqlDataAdapter sda = new SqlDataAdapter(querry, myconn);
+             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+             var ds = new DataSet();
+             sda.Fill(ds);
+             UserDGV.DataSource = ds.Tables[0];
+             myconn.Close(); 
+             */
         }
 
         private void btHome_Click(object sender, EventArgs e)

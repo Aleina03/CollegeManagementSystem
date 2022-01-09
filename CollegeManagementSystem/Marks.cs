@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace CollegeManagementSystem
 {
-    public partial class Fees : Form
+    public partial class Marks : Form
     {
-        public Fees()
+        public Marks()
         {
             InitializeComponent();
         }
@@ -34,23 +34,23 @@ namespace CollegeManagementSystem
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            tbNum.Text = "";
+            tbFn.Text = "";
             tbName.Text = "";
-            TbAm.Text = "";
+            tbMark.Text = "";
         }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                if (tbNum.Text == "" || tbName.Text == "" || TbAm.Text == "")
+                if (tbFn.Text == "" || tbName.Text == "" || tbMark.Text == "")
                 {
                     MessageBox.Show("Missing Information");
                 }
                 else
                 {
                     myconn.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into TeacherTbl values(" + tbNum.Text + ",'" + tbName.Text + "','" + TbAm.Text + "')", myconn);
+                    SqlCommand cmd = new SqlCommand("Insert into TeacherTbl values(" + tbFn.Text + ",'" + tbName.Text + "','" + tbMark.Text + "')", myconn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Fees Successfully Added");
                     myconn.Close();

@@ -42,8 +42,8 @@ namespace CollegeManagementSystem
             tbId.Text = "";
             tbName.Text = "";
             tbPhone.Text = "";
-            tbDeptmt.Text = "";
-            tbFees.Text = "";
+            tbFN.Text = "";
+            tbAverage.Text = "";
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
