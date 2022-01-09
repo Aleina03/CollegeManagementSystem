@@ -44,21 +44,21 @@ namespace CollegeManagementSystem
         {
             tbFn.Text = "";
             tbName.Text = "";
-            tbMark.Text = "";
+            tbId.Text = "";
         }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                if (tbFn.Text == "" || tbName.Text == "" || tbMark.Text == "")
+                if (tbFn.Text == "" || tbName.Text == "" || tbId.Text == "" )
                 {
                     MessageBox.Show("Missing Information");
                 }
                 else
                 {
                     dbconnection.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into TeacherTbl values(" + tbFn.Text + ",'" + tbName.Text + "','" + tbMark.Text + "')", dbconnection);
+                    SqlCommand cmd = new SqlCommand("Insert into TeacherTbl values(" + tbFn.Text + ",'" + tbName.Text + "','" + cbMarks.SelectedItem + "','"+ cbSub.SelectedItem+"')", dbconnection);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Fees Successfully Added");
                     dbconnection.Close();

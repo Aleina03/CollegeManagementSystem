@@ -28,7 +28,9 @@ namespace CollegeManagementSystem
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            this.Hide();
+            Login loginForm = new Login();
+           loginForm.Show();
         }
 
         private void lbClear_Click(object sender, EventArgs e)

@@ -33,24 +33,24 @@ namespace CollegeManagementSystem
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbMark = new System.Windows.Forms.TextBox();
             this.tbAmount = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cbStdId = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tbFn = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.btHome = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
-            this.tbSubject = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tbFn = new System.Windows.Forms.TextBox();
+            this.tbId = new System.Windows.Forms.TextBox();
+            this.cbSub = new System.Windows.Forms.ComboBox();
+            this.cbMarks = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -101,16 +101,6 @@ namespace CollegeManagementSystem
             this.label1.TabIndex = 1;
             this.label1.Text = "College Management System";
             // 
-            // tbMark
-            // 
-            this.tbMark.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMark.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbMark.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbMark.Location = new System.Drawing.Point(114, 315);
-            this.tbMark.Name = "tbMark";
-            this.tbMark.Size = new System.Drawing.Size(171, 19);
-            this.tbMark.TabIndex = 46;
-            // 
             // tbAmount
             // 
             this.tbAmount.AutoSize = true;
@@ -142,20 +132,6 @@ namespace CollegeManagementSystem
             this.dateTimePicker1.Size = new System.Drawing.Size(171, 22);
             this.dateTimePicker1.TabIndex = 43;
             // 
-            // cbStdId
-            // 
-            this.cbStdId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbStdId.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbStdId.ForeColor = System.Drawing.Color.SteelBlue;
-            this.cbStdId.FormattingEnabled = true;
-            this.cbStdId.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cbStdId.Location = new System.Drawing.Point(114, 125);
-            this.cbStdId.Name = "cbStdId";
-            this.cbStdId.Size = new System.Drawing.Size(171, 26);
-            this.cbStdId.TabIndex = 42;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -184,19 +160,9 @@ namespace CollegeManagementSystem
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
             this.label5.Location = new System.Drawing.Point(44, 132);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 19);
+            this.label5.Size = new System.Drawing.Size(22, 19);
             this.label5.TabIndex = 39;
-            this.label5.Text = "StdId";
-            // 
-            // tbFn
-            // 
-            this.tbFn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbFn.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbFn.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbFn.Location = new System.Drawing.Point(132, 174);
-            this.tbFn.Name = "tbFn";
-            this.tbFn.Size = new System.Drawing.Size(153, 19);
-            this.tbFn.TabIndex = 38;
+            this.label5.Text = "Id";
             // 
             // label4
             // 
@@ -269,16 +235,6 @@ namespace CollegeManagementSystem
             this.btAdd.UseVisualStyleBackColor = false;
             this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
-            // tbSubject
-            // 
-            this.tbSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbSubject.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbSubject.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbSubject.Location = new System.Drawing.Point(114, 353);
-            this.tbSubject.Name = "tbSubject";
-            this.tbSubject.Size = new System.Drawing.Size(171, 19);
-            this.tbSubject.TabIndex = 84;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -299,24 +255,85 @@ namespace CollegeManagementSystem
             this.panel2.Size = new System.Drawing.Size(1009, 18);
             this.panel2.TabIndex = 85;
             // 
+            // tbFn
+            // 
+            this.tbFn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbFn.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbFn.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbFn.Location = new System.Drawing.Point(132, 174);
+            this.tbFn.Name = "tbFn";
+            this.tbFn.Size = new System.Drawing.Size(153, 19);
+            this.tbFn.TabIndex = 38;
+            // 
+            // tbId
+            // 
+            this.tbId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbId.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbId.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbId.Location = new System.Drawing.Point(132, 132);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(153, 19);
+            this.tbId.TabIndex = 86;
+            // 
+            // cbSub
+            // 
+            this.cbSub.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbSub.FormattingEnabled = true;
+            this.cbSub.Items.AddRange(new object[] {
+            "Information Technology",
+            "Introduction to programming",
+            "Linear algebra and analytical geometry",
+            "Creating a GPI (C #)",
+            "Students will receive an invitation in their university emails",
+            "Mathematics software systems",
+            "English",
+            "Geometric design",
+            "Administration of dynamic web systems",
+            "Software technologies 1",
+            "Computer networks and communications",
+            "Software technologies 2",
+            "Web Creation and processing of vector images",
+            "Framework systems for web programming",
+            "Information technology on the Internet",
+            "Business information systems"});
+            this.cbSub.Location = new System.Drawing.Point(113, 349);
+            this.cbSub.Name = "cbSub";
+            this.cbSub.Size = new System.Drawing.Size(172, 22);
+            this.cbSub.TabIndex = 87;
+            // 
+            // cbMarks
+            // 
+            this.cbMarks.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbMarks.FormattingEnabled = true;
+            this.cbMarks.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cbMarks.Location = new System.Drawing.Point(113, 312);
+            this.cbMarks.Name = "cbMarks";
+            this.cbMarks.Size = new System.Drawing.Size(172, 22);
+            this.cbMarks.TabIndex = 88;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 572);
+            this.Controls.Add(this.cbMarks);
+            this.Controls.Add(this.cbSub);
+            this.Controls.Add(this.tbId);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.tbSubject);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btHome);
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.tbMark);
             this.Controls.Add(this.tbAmount);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.cbStdId);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.label5);
@@ -341,23 +358,23 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbMark;
         private System.Windows.Forms.Label tbAmount;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox cbStdId;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tbFn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btDelete;
         private System.Windows.Forms.Button btAdd;
-        private System.Windows.Forms.TextBox tbSubject;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox tbFn;
+        private System.Windows.Forms.TextBox tbId;
+        private System.Windows.Forms.ComboBox cbSub;
+        private System.Windows.Forms.ComboBox cbMarks;
     }
 }

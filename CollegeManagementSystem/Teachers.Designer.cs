@@ -48,7 +48,6 @@ namespace CollegeManagementSystem
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btHome = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
-            this.btEdit = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -256,7 +255,7 @@ namespace CollegeManagementSystem
             this.btDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDelete.ForeColor = System.Drawing.Color.White;
-            this.btDelete.Location = new System.Drawing.Point(45, 477);
+            this.btDelete.Location = new System.Drawing.Point(178, 434);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(108, 29);
             this.btDelete.TabIndex = 81;
@@ -264,24 +263,12 @@ namespace CollegeManagementSystem
             this.btDelete.UseVisualStyleBackColor = false;
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
-            // btEdit
-            // 
-            this.btEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btEdit.ForeColor = System.Drawing.Color.White;
-            this.btEdit.Location = new System.Drawing.Point(178, 442);
-            this.btEdit.Name = "btEdit";
-            this.btEdit.Size = new System.Drawing.Size(108, 29);
-            this.btEdit.TabIndex = 80;
-            this.btEdit.Text = "Edit";
-            this.btEdit.UseVisualStyleBackColor = false;
-            // 
             // btAdd
             // 
             this.btAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdd.ForeColor = System.Drawing.Color.White;
-            this.btAdd.Location = new System.Drawing.Point(45, 442);
+            this.btAdd.Location = new System.Drawing.Point(178, 392);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(108, 29);
             this.btAdd.TabIndex = 79;
@@ -296,7 +283,6 @@ namespace CollegeManagementSystem
             this.ClientSize = new System.Drawing.Size(1009, 572);
             this.Controls.Add(this.btHome);
             this.Controls.Add(this.btDelete);
-            this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
@@ -344,7 +330,6 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btDelete;
-        private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btAdd;
     }
 }
