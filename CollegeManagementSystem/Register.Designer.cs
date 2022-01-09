@@ -299,7 +299,7 @@ namespace CollegeManagementSystem
             this.panel2.Size = new System.Drawing.Size(1009, 18);
             this.panel2.TabIndex = 85;
             // 
-            // Marks
+            // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -324,8 +324,9 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Marks";
+            this.Name = "Register";
             this.Text = "Fees";
+            this.Load += new System.EventHandler(this.Register_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

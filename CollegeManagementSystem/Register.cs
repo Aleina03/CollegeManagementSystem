@@ -20,7 +20,8 @@ namespace CollegeManagementSystem
         }
 
         SqlConnection dbconnection;
-        private void Register_Load(object sender, EventArgs e)
+
+        private void Register_Load_1(object sender, EventArgs e)
         {
 
             dbconnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\NELLY\DOCUMENTS\COLLEGEDB.MDF;Integrated Security=True");
@@ -69,6 +70,5 @@ namespace CollegeManagementSystem
             }
         }
 
-    
     }
 }
