@@ -40,7 +40,7 @@ namespace CollegeManagementSystem
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            Register registerForm = new Register();
+            Registration registerForm = new Registration();
             registerForm.Show();
         }
 

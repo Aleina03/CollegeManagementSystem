@@ -41,18 +41,12 @@ namespace CollegeManagementSystem
             teachersForm.Show();
         }
 
-        private void btDepartment_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Department departmentForm = new Department();
-            departmentForm.Show();
-        }
 
         private void btFees_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Marks feesForm = new Marks();
-            feesForm.Show();
+            Register marksForm = new Register();
+            marksForm.Show();
         }
 
         private void btUsers_Click(object sender, EventArgs e)

@@ -1,7 +1,7 @@
 ﻿
 namespace CollegeManagementSystem
 {
-    partial class Marks
+    partial class Register
     {
         /// <summary>
         /// Required designer variable.
@@ -50,6 +50,7 @@ namespace CollegeManagementSystem
             this.btAdd = new System.Windows.Forms.Button();
             this.tbSubject = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -210,11 +211,12 @@ namespace CollegeManagementSystem
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(470, 165);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(384, 344);
+            this.dataGridView1.Size = new System.Drawing.Size(462, 344);
             this.dataGridView1.TabIndex = 56;
             // 
             // label11
@@ -288,11 +290,21 @@ namespace CollegeManagementSystem
             this.label8.TabIndex = 83;
             this.label8.Text = "Subject";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 554);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1009, 18);
+            this.panel2.TabIndex = 85;
+            // 
             // Marks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 572);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.tbSubject);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btHome);
@@ -345,5 +357,6 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.TextBox tbSubject;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel2;
     }
 }

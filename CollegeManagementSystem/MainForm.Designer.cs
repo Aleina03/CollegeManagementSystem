@@ -35,10 +35,10 @@ namespace CollegeManagementSystem
             this.label1 = new System.Windows.Forms.Label();
             this.btStudent = new System.Windows.Forms.Button();
             this.btTeacher = new System.Windows.Forms.Button();
-            this.btDepartment = new System.Windows.Forms.Button();
-            this.btFees = new System.Windows.Forms.Button();
+            this.btRegister = new System.Windows.Forms.Button();
             this.btUsers = new System.Windows.Forms.Button();
             this.btLogout = new System.Windows.Forms.Button();
+            this.btInformation = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +83,7 @@ namespace CollegeManagementSystem
             this.btStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btStudent.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btStudent.ForeColor = System.Drawing.Color.White;
-            this.btStudent.Location = new System.Drawing.Point(316, 127);
+            this.btStudent.Location = new System.Drawing.Point(316, 121);
             this.btStudent.Name = "btStudent";
             this.btStudent.Size = new System.Drawing.Size(196, 43);
             this.btStudent.TabIndex = 1;
@@ -97,7 +97,7 @@ namespace CollegeManagementSystem
             this.btTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTeacher.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btTeacher.ForeColor = System.Drawing.Color.White;
-            this.btTeacher.Location = new System.Drawing.Point(316, 193);
+            this.btTeacher.Location = new System.Drawing.Point(316, 182);
             this.btTeacher.Name = "btTeacher";
             this.btTeacher.Size = new System.Drawing.Size(196, 43);
             this.btTeacher.TabIndex = 2;
@@ -105,33 +105,19 @@ namespace CollegeManagementSystem
             this.btTeacher.UseVisualStyleBackColor = false;
             this.btTeacher.Click += new System.EventHandler(this.btTeacher_Click);
             // 
-            // btDepartment
+            // btRegister
             // 
-            this.btDepartment.BackColor = System.Drawing.Color.SteelBlue;
-            this.btDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDepartment.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btDepartment.ForeColor = System.Drawing.Color.White;
-            this.btDepartment.Location = new System.Drawing.Point(316, 254);
-            this.btDepartment.Name = "btDepartment";
-            this.btDepartment.Size = new System.Drawing.Size(196, 43);
-            this.btDepartment.TabIndex = 3;
-            this.btDepartment.Text = "Departments";
-            this.btDepartment.UseVisualStyleBackColor = false;
-            this.btDepartment.Click += new System.EventHandler(this.btDepartment_Click);
-            // 
-            // btFees
-            // 
-            this.btFees.BackColor = System.Drawing.Color.SteelBlue;
-            this.btFees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btFees.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btFees.ForeColor = System.Drawing.Color.White;
-            this.btFees.Location = new System.Drawing.Point(316, 324);
-            this.btFees.Name = "btFees";
-            this.btFees.Size = new System.Drawing.Size(196, 43);
-            this.btFees.TabIndex = 4;
-            this.btFees.Text = "Fees";
-            this.btFees.UseVisualStyleBackColor = false;
-            this.btFees.Click += new System.EventHandler(this.btFees_Click);
+            this.btRegister.BackColor = System.Drawing.Color.SteelBlue;
+            this.btRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRegister.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btRegister.ForeColor = System.Drawing.Color.White;
+            this.btRegister.Location = new System.Drawing.Point(316, 301);
+            this.btRegister.Name = "btRegister";
+            this.btRegister.Size = new System.Drawing.Size(196, 43);
+            this.btRegister.TabIndex = 4;
+            this.btRegister.Text = "Register";
+            this.btRegister.UseVisualStyleBackColor = false;
+            this.btRegister.Click += new System.EventHandler(this.btFees_Click);
             // 
             // btUsers
             // 
@@ -139,7 +125,7 @@ namespace CollegeManagementSystem
             this.btUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btUsers.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btUsers.ForeColor = System.Drawing.Color.White;
-            this.btUsers.Location = new System.Drawing.Point(316, 392);
+            this.btUsers.Location = new System.Drawing.Point(316, 242);
             this.btUsers.Name = "btUsers";
             this.btUsers.Size = new System.Drawing.Size(196, 43);
             this.btUsers.TabIndex = 5;
@@ -152,13 +138,26 @@ namespace CollegeManagementSystem
             this.btLogout.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLogout.ForeColor = System.Drawing.Color.White;
-            this.btLogout.Location = new System.Drawing.Point(357, 454);
+            this.btLogout.Location = new System.Drawing.Point(354, 432);
             this.btLogout.Name = "btLogout";
             this.btLogout.Size = new System.Drawing.Size(108, 29);
             this.btLogout.TabIndex = 6;
             this.btLogout.Text = "Logout";
             this.btLogout.UseVisualStyleBackColor = false;
             this.btLogout.Click += new System.EventHandler(this.btLogout_Click);
+            // 
+            // btInformation
+            // 
+            this.btInformation.BackColor = System.Drawing.Color.SteelBlue;
+            this.btInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInformation.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btInformation.ForeColor = System.Drawing.Color.White;
+            this.btInformation.Location = new System.Drawing.Point(316, 361);
+            this.btInformation.Name = "btInformation";
+            this.btInformation.Size = new System.Drawing.Size(196, 43);
+            this.btInformation.TabIndex = 7;
+            this.btInformation.Text = "Information";
+            this.btInformation.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -167,10 +166,10 @@ namespace CollegeManagementSystem
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(847, 506);
+            this.Controls.Add(this.btInformation);
             this.Controls.Add(this.btLogout);
             this.Controls.Add(this.btUsers);
-            this.Controls.Add(this.btFees);
-            this.Controls.Add(this.btDepartment);
+            this.Controls.Add(this.btRegister);
             this.Controls.Add(this.btTeacher);
             this.Controls.Add(this.btStudent);
             this.Controls.Add(this.panel1);
@@ -189,10 +188,10 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btStudent;
         private System.Windows.Forms.Button btTeacher;
-        private System.Windows.Forms.Button btDepartment;
-        private System.Windows.Forms.Button btFees;
+        private System.Windows.Forms.Button btRegister;
         private System.Windows.Forms.Button btUsers;
         private System.Windows.Forms.Button btLogout;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btInformation;
     }
 }

@@ -34,9 +34,6 @@ namespace CollegeManagementSystem
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tbAddress = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.tbPhone = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,7 +44,6 @@ namespace CollegeManagementSystem
             this.label5 = new System.Windows.Forms.Label();
             this.tbId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbDep = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btHome = new System.Windows.Forms.Button();
@@ -112,38 +108,6 @@ namespace CollegeManagementSystem
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1009, 18);
             this.panel2.TabIndex = 3;
-            // 
-            // tbAddress
-            // 
-            this.tbAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbAddress.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbAddress.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbAddress.Location = new System.Drawing.Point(115, 398);
-            this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(171, 19);
-            this.tbAddress.TabIndex = 31;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label10.Location = new System.Drawing.Point(45, 398);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 19);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "Address";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label9.Location = new System.Drawing.Point(45, 356);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 19);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Deptmt";
             // 
             // tbPhone
             // 
@@ -253,21 +217,6 @@ namespace CollegeManagementSystem
             this.label4.TabIndex = 18;
             this.label4.Text = "ID";
             // 
-            // cbDep
-            // 
-            this.cbDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbDep.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbDep.ForeColor = System.Drawing.Color.SteelBlue;
-            this.cbDep.FormattingEnabled = true;
-            this.cbDep.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cbDep.Location = new System.Drawing.Point(115, 356);
-            this.cbDep.Name = "cbDep";
-            this.cbDep.Size = new System.Drawing.Size(171, 26);
-            this.cbDep.TabIndex = 32;
-            this.cbDep.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -281,11 +230,12 @@ namespace CollegeManagementSystem
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(470, 169);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(386, 337);
+            this.dataGridView1.Size = new System.Drawing.Size(423, 337);
             this.dataGridView1.TabIndex = 37;
             // 
             // btHome
@@ -350,10 +300,6 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.cbDep);
-            this.Controls.Add(this.tbAddress);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.tbPhone);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -384,9 +330,6 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox tbAddress;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbPhone;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -397,7 +340,6 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbDep;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btHome;

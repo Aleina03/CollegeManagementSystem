@@ -162,12 +162,14 @@ namespace CollegeManagementSystem
             // 
             // UserDGV
             // 
+            this.UserDGV.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.UserDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UserDGV.Location = new System.Drawing.Point(470, 166);
             this.UserDGV.Name = "UserDGV";
             this.UserDGV.RowTemplate.Height = 25;
-            this.UserDGV.Size = new System.Drawing.Size(385, 337);
+            this.UserDGV.Size = new System.Drawing.Size(454, 337);
             this.UserDGV.TabIndex = 70;
+            this.UserDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UserDGV_CellContentClick);
             // 
             // label11
             // 
@@ -241,6 +243,7 @@ namespace CollegeManagementSystem
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(171, 26);
             this.cbRole.TabIndex = 84;
+            this.cbRole.SelectedIndexChanged += new System.EventHandler(this.cbRole_SelectedIndexChanged);
             // 
             // label7
             // 

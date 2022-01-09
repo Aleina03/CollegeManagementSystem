@@ -33,15 +33,15 @@ namespace CollegeManagementSystem
         private void populate()
         {
 
-            /* myconn.Open();
-             string querry = "select + fromUserTbl";
+             myconn.Open();
+             string querry = "select * from UserTbl";
              SqlDataAdapter sda = new SqlDataAdapter(querry, myconn);
              SqlCommandBuilder builder = new SqlCommandBuilder(sda);
              var ds = new DataSet();
              sda.Fill(ds);
              UserDGV.DataSource = ds.Tables[0];
              myconn.Close(); 
-             */
+             
         }
 
         private void btHome_Click(object sender, EventArgs e)
@@ -56,6 +56,7 @@ namespace CollegeManagementSystem
             UIdTb.Text = "";
             UNameTb.Text = "";
             UPasswordTb.Text = "";
+            cbRole.SelectedItem = null;
         }
 
         private void btAdd_Click(object sender, EventArgs e)
@@ -69,7 +70,7 @@ namespace CollegeManagementSystem
                 else
                 {
                     myconn.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into UserTbl values(" + UIdTb.Text + ",'" + UNameTb.Text + "','" + UPasswordTb.Text + "')", myconn);
+                    SqlCommand cmd = new SqlCommand("Insert into UserTbl values(" + UIdTb.Text + ",'" + UNameTb.Text + "','" + UPasswordTb.Text + "','" + cbRole.SelectedItem + "' )", myconn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("User Successfully Added");
                     myconn.Close();
@@ -79,6 +80,16 @@ namespace CollegeManagementSystem
             {
                 MessageBox.Show("Something Went Wrong");
             }
+        }
+
+        private void cbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
