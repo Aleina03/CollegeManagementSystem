@@ -22,7 +22,7 @@ namespace CollegeManagementSystem
 
         private void Student_Load(object sender, EventArgs e)
         {
-            fillTheStudentTable();
+            fillTheStudentTable(); 
         }
 
         private void loadStudentTableData()
@@ -37,15 +37,14 @@ namespace CollegeManagementSystem
             sda.Fill(ds);
 
             StdDGV.DataSource = ds.Tables[0];
+
+            StdDGV.Columns["StdFN"].HeaderText = "Fakultet nomer"; 
         }
 
         private void fillTheStudentTable()
         {
 
             loadStudentTableData();
-
-
-            StdDGV.Columns["StdFN"].HeaderText = "Fakultet nomer";
 
             DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn();
             deleteButton.HeaderText = "Action";
@@ -55,30 +54,34 @@ namespace CollegeManagementSystem
           
             StdDGV.Columns.Add(deleteButton);
 
-         
-
         }
 
         private void StdDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (StdDGV.Columns[e.ColumnIndex].Name == "Delete")
+               
             {
-                // this will get the id of clicked delete button student id
-                int deleteStudentID = Convert.ToInt32(this.StdDGV.Rows[e.RowIndex].Cells[0].Value);
+                try
+                {
+                    int deleteStudentID = Convert.ToInt32(StdDGV.Rows[e.RowIndex].Cells[0].Value);
 
-                dbconnection.Open();
-                SqlCommand cmd = new SqlCommand("DELETE FROM StudentTbl WHERE StdId=@StdId", dbconnection);
-                cmd.Parameters.AddWithValue("@StdId", deleteStudentID); 
-                cmd.ExecuteNonQuery();
-                dbconnection.Close(); 
+                    dbconnection.Open();
+                    SqlCommand cmd = new SqlCommand("DELETE FROM StudentTbl WHERE StdId=@StdId", dbconnection);
+                    cmd.Parameters.AddWithValue("@StdId", deleteStudentID);
+                    cmd.ExecuteNonQuery();
+                    dbconnection.Close();
 
-                MessageBox.Show("Deleted.");
+                    MessageBox.Show("Deleted.");
 
-                loadStudentTableData();
+                    fillTheStudentTable();
 
-            }
+                    this.Hide();
+                    Student studentForm = new Student();
+                    studentForm.Show();
+                } catch { }
+                }
             // This will show you the button name when you click
-           // MessageBox.Show(StdDGV.Columns[e.ColumnIndex].Name); 
+            // MessageBox.Show(StdDGV.Columns[e.ColumnIndex].Name); 
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -143,6 +146,9 @@ namespace CollegeManagementSystem
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Student Successfully Added");
                 dbconnection.Close();
+
+
+                loadStudentTableData();
             }
         }
 

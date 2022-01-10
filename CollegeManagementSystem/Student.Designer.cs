@@ -45,7 +45,6 @@ namespace CollegeManagementSystem
             this.StdDGV = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.btHome = new System.Windows.Forms.Button();
-            this.btDelete = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StdDGV)).BeginInit();
@@ -222,26 +221,13 @@ namespace CollegeManagementSystem
             this.btHome.BackColor = System.Drawing.Color.SteelBlue;
             this.btHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btHome.ForeColor = System.Drawing.Color.White;
-            this.btHome.Location = new System.Drawing.Point(28, 380);
+            this.btHome.Location = new System.Drawing.Point(28, 359);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(108, 29);
             this.btHome.TabIndex = 82;
             this.btHome.Text = "Home";
             this.btHome.UseVisualStyleBackColor = false;
             this.btHome.Click += new System.EventHandler(this.btHome_Click);
-            // 
-            // btDelete
-            // 
-            this.btDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDelete.ForeColor = System.Drawing.Color.White;
-            this.btDelete.Location = new System.Drawing.Point(28, 337);
-            this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(108, 29);
-            this.btDelete.TabIndex = 81;
-            this.btDelete.Text = "Delete";
-            this.btDelete.UseVisualStyleBackColor = false;
-            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // btAdd
             // 
@@ -262,7 +248,6 @@ namespace CollegeManagementSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 572);
             this.Controls.Add(this.btHome);
-            this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.StdDGV);
@@ -278,6 +263,7 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Student";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student";
             this.Load += new System.EventHandler(this.Student_Load);
             this.panel1.ResumeLayout(false);
@@ -306,7 +292,6 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.DataGridView StdDGV;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btHome;
-        private System.Windows.Forms.Button btDelete;
         private System.Windows.Forms.Button btAdd;
     }
 }
