@@ -50,7 +50,7 @@ namespace CollegeManagementSystem
 
         private void populate()
         {
-
+/*
             dbconnection.Open();
             string querry = "select * from InformaTbl";
             SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
@@ -58,7 +58,7 @@ namespace CollegeManagementSystem
             var ds = new DataSet();
             sda.Fill(ds); //dava error
             InformDGV.DataSource = ds.Tables[0];
-            dbconnection.Close();
+            dbconnection.Close();*/
 
         }
     }

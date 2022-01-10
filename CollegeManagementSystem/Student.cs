@@ -28,14 +28,14 @@ namespace CollegeManagementSystem
         private void populate()
         {
 
-            dbconnection.Open();
+       /*     dbconnection.Open();
             string querry = "select * fromStudentTbl";
             SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
             StdDGV.DataSource = ds.Tables[0];
-            dbconnection.Close();
+            dbconnection.Close();*/ 
 
         }
 
