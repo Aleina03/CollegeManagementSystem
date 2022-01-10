@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient
+using System.Data.SqlClient;
 
 namespace CollegeManagementSystem
 {
@@ -29,28 +29,11 @@ namespace CollegeManagementSystem
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (tbId.Text == "")
-                {
-                    MessageBox.Show("Enter The User Id");
-                }
-                else
-                {
-                    dbconnection.Open();
-                    string query = "delete from InformTbl where StdId=" + tbId.Text + ";";
-                    SqlCommand cmd = new SqlCommand(query, dbconnection);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("User Deleted Successfully");
-                    dbconnection.Close();
-                    populate();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("User Not Deleted");
-            }
-
+            dbconnection.Open();
+            SqlCommand cmd = new SqlCommand("delete from InformTbl where StdId ='" + tbId.Text + "'", dbconnection);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Mark Deleted Successfully.");
+            dbconnection.Close();
         }
 
         private void btSearch_Click(object sender, EventArgs e)
@@ -73,7 +56,7 @@ namespace CollegeManagementSystem
             SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
-            sda.Fill(ds);
+            sda.Fill(ds); //dava error
             InformDGV.DataSource = ds.Tables[0];
             dbconnection.Close();
 

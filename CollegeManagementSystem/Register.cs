@@ -92,7 +92,7 @@ namespace CollegeManagementSystem
                 else
                 {
                     dbconnection.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into RegistrerTbl values(" + tbId + ",'" + tbFn.Text + ",'" + tbName.Text + "','" + dateTimePicker1 + "','" + cbMarks.SelectedItem + "','" + cbSub.SelectedItem + "')", dbconnection);
+                    SqlCommand cmd = new SqlCommand("Insert into RegistrerTbl values('" + tbId + "','" + tbFn.Text + "','" + tbName.Text + "','" + dateTimePicker1 + "','" + cbMarks.SelectedItem + "','" + cbSub.SelectedItem + "')", dbconnection);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Mark Successfully Added");
                     dbconnection.Close();

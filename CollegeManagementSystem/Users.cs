@@ -89,7 +89,7 @@ namespace CollegeManagementSystem
                 else
                 {
                     dbconnection.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into UserTbl values(" + tbId.Text + ",'" + UNameTb.Text + "','" + UPasswordTb.Text + "','" + cbRole.SelectedItem + "' )", dbconnection);
+                    SqlCommand cmd = new SqlCommand("Insert into UserTbl values('" + tbId.Text + "','" + UNameTb.Text + "','" + UPasswordTb.Text + "','" + cbRole.SelectedItem + "' )", dbconnection);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("User Successfully Added");
                     dbconnection.Close();

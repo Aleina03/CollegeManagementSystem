@@ -73,7 +73,7 @@ namespace CollegeManagementSystem
                 else
                 {
                     dbconnection.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into TeacherTbl values(" + tbId.Text + ",'" + tbName.Text + "','" + tbPhone.Text + "')", dbconnection);
+                    SqlCommand cmd = new SqlCommand("Insert into TeacherTbl values('" + tbId.Text + "','" + tbName.Text + "','" + tbPhone.Text + "')", dbconnection);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Teacher Successfully Added");
                     dbconnection.Close();
