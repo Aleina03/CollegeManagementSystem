@@ -39,9 +39,9 @@ namespace CollegeManagementSystem
             this.btHome = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
             this.btSearch = new System.Windows.Forms.Button();
-            this.UNameTb = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.UIdTb = new System.Windows.Forms.TextBox();
+            this.tbId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbFN = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -161,16 +161,17 @@ namespace CollegeManagementSystem
             this.btSearch.TabIndex = 88;
             this.btSearch.Text = "Search";
             this.btSearch.UseVisualStyleBackColor = false;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
-            // UNameTb
+            // tbName
             // 
-            this.UNameTb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UNameTb.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UNameTb.ForeColor = System.Drawing.Color.SteelBlue;
-            this.UNameTb.Location = new System.Drawing.Point(123, 207);
-            this.UNameTb.Name = "UNameTb";
-            this.UNameTb.Size = new System.Drawing.Size(171, 19);
-            this.UNameTb.TabIndex = 94;
+            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbName.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbName.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbName.Location = new System.Drawing.Point(123, 207);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(171, 19);
+            this.tbName.TabIndex = 94;
             // 
             // label5
             // 
@@ -183,15 +184,15 @@ namespace CollegeManagementSystem
             this.label5.TabIndex = 93;
             this.label5.Text = "Name";
             // 
-            // UIdTb
+            // tbId
             // 
-            this.UIdTb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UIdTb.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UIdTb.ForeColor = System.Drawing.Color.SteelBlue;
-            this.UIdTb.Location = new System.Drawing.Point(123, 115);
-            this.UIdTb.Name = "UIdTb";
-            this.UIdTb.Size = new System.Drawing.Size(171, 19);
-            this.UIdTb.TabIndex = 92;
+            this.tbId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbId.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbId.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbId.Location = new System.Drawing.Point(123, 115);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(171, 19);
+            this.tbId.TabIndex = 92;
             // 
             // label4
             // 
@@ -232,9 +233,9 @@ namespace CollegeManagementSystem
             this.ClientSize = new System.Drawing.Size(993, 533);
             this.Controls.Add(this.tbFN);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.UNameTb);
+            this.Controls.Add(this.tbName);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.UIdTb);
+            this.Controls.Add(this.tbId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btHome);
             this.Controls.Add(this.btDelete);
@@ -266,9 +267,9 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btDelete;
         private System.Windows.Forms.Button btSearch;
-        private System.Windows.Forms.TextBox UNameTb;
+        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox UIdTb;
+        private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbFN;
         private System.Windows.Forms.Label label8;

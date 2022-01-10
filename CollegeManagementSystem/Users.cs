@@ -40,7 +40,7 @@ namespace CollegeManagementSystem
              var ds = new DataSet();
              sda.Fill(ds);
              UserDGV.DataSource = ds.Tables[0];
-            dbconnection.Close(); 
+             dbconnection.Close();
              
         }
 
@@ -53,24 +53,43 @@ namespace CollegeManagementSystem
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            UIdTb.Text = "";
-            UNameTb.Text = "";
-            UPasswordTb.Text = "";
-            cbRole.SelectedItem = null;
+            try
+            {
+                if (tbId.Text == "")
+                {
+                    MessageBox.Show("Enter The User Id");
+                }
+                else
+                {
+                    dbconnection.Open();
+                    string query = "delete from UserTbl where UserId=" + tbId.Text + ";";
+                    SqlCommand cmd = new SqlCommand(query, dbconnection);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("User Deleted Successfully");
+                    dbconnection.Close();
+                    populate();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("User Not Deleted");
+            }
+
+
         }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                if (UIdTb.Text == "" || UNameTb.Text == "" || UPasswordTb.Text == "")
+                if (tbId.Text == "" || UNameTb.Text == "" || UPasswordTb.Text == "")
                 {
                     MessageBox.Show("Missing Information");
                 }
                 else
                 {
                     dbconnection.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into UserTbl values(" + UIdTb.Text + ",'" + UNameTb.Text + "','" + UPasswordTb.Text + "','" + cbRole.SelectedItem + "' )", dbconnection);
+                    SqlCommand cmd = new SqlCommand("Insert into UserTbl values(" + tbId.Text + ",'" + UNameTb.Text + "','" + UPasswordTb.Text + "','" + cbRole.SelectedItem + "' )", dbconnection);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("User Successfully Added");
                     dbconnection.Close();
@@ -90,7 +109,11 @@ namespace CollegeManagementSystem
 
         private void UserDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            tbId.Text = UserDGV.SelectedRows[0].Cells[0].Value.ToString();
+            UNameTb.Text = UserDGV.SelectedRows[0].Cells[1].Value.ToString();
+            UPasswordTb.Text = UserDGV.SelectedRows[0].Cells[2].Value.ToString();
+            //cbRole.SelectedItem = UserDGV.SelectedRows[0].Cells[3].Value.ToString();
         }
     }
 }
+//userite ne se dobavqt!!

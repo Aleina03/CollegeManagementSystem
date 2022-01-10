@@ -26,7 +26,16 @@ namespace CollegeManagementSystem
 
         private void btDelete_Click(object sender, EventArgs e)
         {
+            tbId.Text = "";
+            tbName.Text = "";
+            tbFN.Text = "";
+        }
 
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            /*
+             da tursi po tbId, tbName i tbFN ot StudentTbl, RegisterTbl i sa pokaje v Inf About list-a
+             */
         }
     }
 }

@@ -74,9 +74,9 @@ namespace CollegeManagementSystem
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(470, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 25);
+            this.label3.Size = new System.Drawing.Size(91, 25);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Account";
+            this.label3.Text = "Register";
             // 
             // label2
             // 
@@ -192,9 +192,9 @@ namespace CollegeManagementSystem
             this.label11.ForeColor = System.Drawing.Color.SteelBlue;
             this.label11.Location = new System.Drawing.Point(470, 122);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(111, 25);
+            this.label11.Size = new System.Drawing.Size(91, 25);
             this.label11.TabIndex = 55;
-            this.label11.Text = "Marks List";
+            this.label11.Text = "Register";
             // 
             // btHome
             // 

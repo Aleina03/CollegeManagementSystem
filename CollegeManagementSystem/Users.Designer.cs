@@ -37,7 +37,7 @@ namespace CollegeManagementSystem
             this.label6 = new System.Windows.Forms.Label();
             this.UNameTb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.UIdTb = new System.Windows.Forms.TextBox();
+            this.tbId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.UserDGV = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
@@ -139,15 +139,15 @@ namespace CollegeManagementSystem
             this.label5.TabIndex = 57;
             this.label5.Text = "Name";
             // 
-            // UIdTb
+            // tbId
             // 
-            this.UIdTb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UIdTb.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UIdTb.ForeColor = System.Drawing.Color.SteelBlue;
-            this.UIdTb.Location = new System.Drawing.Point(130, 123);
-            this.UIdTb.Name = "UIdTb";
-            this.UIdTb.Size = new System.Drawing.Size(171, 19);
-            this.UIdTb.TabIndex = 56;
+            this.tbId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbId.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbId.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbId.Location = new System.Drawing.Point(130, 123);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(171, 19);
+            this.tbId.TabIndex = 56;
             // 
             // label4
             // 
@@ -166,7 +166,7 @@ namespace CollegeManagementSystem
             this.UserDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UserDGV.Location = new System.Drawing.Point(470, 166);
             this.UserDGV.Name = "UserDGV";
-            this.UserDGV.RowTemplate.Height = 25;
+            this.UserDGV.RowTemplate.Height = 30;
             this.UserDGV.Size = new System.Drawing.Size(454, 337);
             this.UserDGV.TabIndex = 70;
             this.UserDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UserDGV_CellContentClick);
@@ -273,7 +273,7 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.label6);
             this.Controls.Add(this.UNameTb);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.UIdTb);
+            this.Controls.Add(this.tbId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -298,7 +298,7 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox UNameTb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox UIdTb;
+        private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView UserDGV;
         private System.Windows.Forms.Label label11;
