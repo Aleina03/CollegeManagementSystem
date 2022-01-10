@@ -46,13 +46,13 @@ namespace CollegeManagementSystem
             this.label9 = new System.Windows.Forms.Label();
             this.tbAverage = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.StdDGV = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.btHome = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StdDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -241,15 +241,15 @@ namespace CollegeManagementSystem
             this.label10.TabIndex = 16;
             this.label10.Text = "Average";
             // 
-            // dataGridView1
+            // StdDGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(470, 169);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(463, 333);
-            this.dataGridView1.TabIndex = 18;
+            this.StdDGV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.StdDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StdDGV.Location = new System.Drawing.Point(470, 169);
+            this.StdDGV.Name = "StdDGV";
+            this.StdDGV.RowTemplate.Height = 25;
+            this.StdDGV.Size = new System.Drawing.Size(463, 333);
+            this.StdDGV.TabIndex = 18;
             // 
             // label11
             // 
@@ -310,7 +310,7 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.StdDGV);
             this.Controls.Add(this.tbAverage);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tbFN);
@@ -331,7 +331,7 @@ namespace CollegeManagementSystem
             this.Load += new System.EventHandler(this.Student_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StdDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,7 +356,7 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbAverage;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView StdDGV;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btDelete;

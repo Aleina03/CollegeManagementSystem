@@ -34,7 +34,7 @@ namespace CollegeManagementSystem
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.InformDGV = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.btHome = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@ namespace CollegeManagementSystem
             this.tbFN = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InformDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,15 +103,15 @@ namespace CollegeManagementSystem
             this.panel2.Size = new System.Drawing.Size(993, 18);
             this.panel2.TabIndex = 4;
             // 
-            // dataGridView1
+            // InformDGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(470, 158);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(423, 337);
-            this.dataGridView1.TabIndex = 39;
+            this.InformDGV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.InformDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InformDGV.Location = new System.Drawing.Point(470, 158);
+            this.InformDGV.Name = "InformDGV";
+            this.InformDGV.RowTemplate.Height = 25;
+            this.InformDGV.Size = new System.Drawing.Size(423, 337);
+            this.InformDGV.TabIndex = 39;
             // 
             // label11
             // 
@@ -240,16 +240,17 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.btHome);
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btSearch);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.InformDGV);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Information";
             this.Text = "Information";
+            this.Load += new System.EventHandler(this.Information_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InformDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,7 +263,7 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView InformDGV;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btDelete;

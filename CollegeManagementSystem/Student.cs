@@ -18,10 +18,24 @@ namespace CollegeManagementSystem
         {
             InitializeComponent();
         }
-        SqlConnection myconn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelly\Documents\Collegedb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection dbconnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelly\Documents\Collegedb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void Student_Load(object sender, EventArgs e)
         {
+            populate();
+        }
+
+        private void populate()
+        {
+
+            dbconnection.Open();
+            string querry = "select * fromStudentTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            StdDGV.DataSource = ds.Tables[0];
+            dbconnection.Close();
 
         }
 
@@ -39,11 +53,27 @@ namespace CollegeManagementSystem
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            tbId.Text = "";
-            tbName.Text = "";
-            tbPhone.Text = "";
-            tbFN.Text = "";
-            tbAverage.Text = "";
+            try
+            {
+                if (tbId.Text == "")
+                {
+                    MessageBox.Show("Enter The User Id");
+                }
+                else
+                {
+                    dbconnection.Open();
+                    string query = "delete from UserTbl where UserId=" + tbId.Text + ";";
+                    SqlCommand cmd = new SqlCommand(query, dbconnection);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("User Deleted Successfully");
+                    dbconnection.Close();
+                    populate();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("User Not Deleted");
+            }
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -61,11 +91,11 @@ namespace CollegeManagementSystem
                 }
                 else
                 {
-                    myconn.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into StudentTbl values(" + tbId.Text + ",'" + tbName.Text + "','" + tbPhone.Text + "')", myconn);
+                    dbconnection.Open();
+                    SqlCommand cmd = new SqlCommand("Insert into StudentTbl values(" + tbId.Text + ",'" + tbName.Text + "','" + tbPhone.Text + "')", dbconnection);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Student Successfully Added");
-                    myconn.Close();
+                    dbconnection.Close();
                 }
             }
             catch

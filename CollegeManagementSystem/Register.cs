@@ -21,11 +21,27 @@ namespace CollegeManagementSystem
 
         SqlConnection dbconnection;
 
+
         private void Register_Load_1(object sender, EventArgs e)
         {
+            populate();
 
             dbconnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\NELLY\DOCUMENTS\COLLEGEDB.MDF;Integrated Security=True");
             dbconnection.Open(); 
+        }
+
+        private void populate()
+        {
+
+            dbconnection.Open();
+            string querry = "select * from RegisterTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            RegDGV.DataSource = ds.Tables[0];
+            dbconnection.Close();
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -42,11 +58,27 @@ namespace CollegeManagementSystem
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            tbFn.Text = "";
-            tbName.Text = "";
-            tbId.Text = "";
-            cbMarks.SelectedItem = null;
-            cbSub.SelectedItem = null;
+            try
+            {
+                if (tbId.Text == "")
+                {
+                    MessageBox.Show("Enter The User Id");
+                }
+                else
+                {
+                    dbconnection.Open();
+                    string query = "delete from RegisterTbl where StdId=" + tbId.Text + ";";
+                    SqlCommand cmd = new SqlCommand(query, dbconnection);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("User Deleted Successfully");
+                    dbconnection.Close();
+                    populate();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("User Not Deleted");
+            }
         }
 
         private void btAdd_Click(object sender, EventArgs e)

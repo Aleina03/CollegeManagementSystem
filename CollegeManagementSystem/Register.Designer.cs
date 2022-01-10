@@ -40,7 +40,7 @@ namespace CollegeManagementSystem
             this.tbName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.RegDGV = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.btHome = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@ namespace CollegeManagementSystem
             this.cbSub = new System.Windows.Forms.ComboBox();
             this.cbMarks = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -175,15 +175,15 @@ namespace CollegeManagementSystem
             this.label4.TabIndex = 37;
             this.label4.Text = "Faculty №";
             // 
-            // dataGridView1
+            // RegDGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(470, 165);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 344);
-            this.dataGridView1.TabIndex = 56;
+            this.RegDGV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.RegDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RegDGV.Location = new System.Drawing.Point(470, 165);
+            this.RegDGV.Name = "RegDGV";
+            this.RegDGV.RowTemplate.Height = 25;
+            this.RegDGV.Size = new System.Drawing.Size(462, 344);
+            this.RegDGV.TabIndex = 56;
             // 
             // label11
             // 
@@ -329,7 +329,7 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.btHome);
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btAdd);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.RegDGV);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.tbAmount);
             this.Controls.Add(this.label7);
@@ -346,7 +346,7 @@ namespace CollegeManagementSystem
             this.Load += new System.EventHandler(this.Register_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,7 +365,7 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView RegDGV;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btDelete;
