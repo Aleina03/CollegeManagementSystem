@@ -111,7 +111,7 @@ namespace CollegeManagementSystem
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(46, 213);
+            this.label5.Location = new System.Drawing.Point(13, 162);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 19);
             this.label5.TabIndex = 6;
@@ -122,7 +122,7 @@ namespace CollegeManagementSystem
             this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbName.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbName.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbName.Location = new System.Drawing.Point(116, 213);
+            this.tbName.Location = new System.Drawing.Point(83, 162);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(171, 19);
             this.tbName.TabIndex = 7;
@@ -132,7 +132,7 @@ namespace CollegeManagementSystem
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(48, 262);
+            this.label6.Location = new System.Drawing.Point(15, 211);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 19);
             this.label6.TabIndex = 8;
@@ -147,17 +147,18 @@ namespace CollegeManagementSystem
             this.cbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cbGender.Location = new System.Drawing.Point(116, 255);
+            this.cbGender.Location = new System.Drawing.Point(83, 204);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(171, 26);
             this.cbGender.TabIndex = 9;
+            this.cbGender.SelectedIndexChanged += new System.EventHandler(this.cbGender_SelectedIndexChanged);
             // 
             // tbPhone
             // 
             this.tbPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPhone.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbPhone.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbPhone.Location = new System.Drawing.Point(116, 302);
+            this.tbPhone.Location = new System.Drawing.Point(83, 251);
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(171, 19);
             this.tbPhone.TabIndex = 13;
@@ -167,7 +168,7 @@ namespace CollegeManagementSystem
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label8.Location = new System.Drawing.Point(46, 301);
+            this.label8.Location = new System.Drawing.Point(13, 250);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 19);
             this.label8.TabIndex = 12;
@@ -178,7 +179,7 @@ namespace CollegeManagementSystem
             this.tbFN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFN.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbFN.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbFN.Location = new System.Drawing.Point(134, 169);
+            this.tbFN.Location = new System.Drawing.Point(101, 118);
             this.tbFN.Name = "tbFN";
             this.tbFN.Size = new System.Drawing.Size(153, 19);
             this.tbFN.TabIndex = 15;
@@ -188,7 +189,7 @@ namespace CollegeManagementSystem
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label9.Location = new System.Drawing.Point(46, 168);
+            this.label9.Location = new System.Drawing.Point(13, 117);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 19);
             this.label9.TabIndex = 14;
@@ -198,18 +199,19 @@ namespace CollegeManagementSystem
             // 
             this.StdDGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.StdDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StdDGV.Location = new System.Drawing.Point(470, 169);
+            this.StdDGV.Location = new System.Drawing.Point(276, 169);
             this.StdDGV.Name = "StdDGV";
             this.StdDGV.RowTemplate.Height = 25;
-            this.StdDGV.Size = new System.Drawing.Size(463, 333);
+            this.StdDGV.Size = new System.Drawing.Size(657, 333);
             this.StdDGV.TabIndex = 18;
+            this.StdDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StdDGV_CellContentClick);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label11.Location = new System.Drawing.Point(470, 130);
+            this.label11.Location = new System.Drawing.Point(276, 118);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(126, 25);
             this.label11.TabIndex = 4;
@@ -220,7 +222,7 @@ namespace CollegeManagementSystem
             this.btHome.BackColor = System.Drawing.Color.SteelBlue;
             this.btHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btHome.ForeColor = System.Drawing.Color.White;
-            this.btHome.Location = new System.Drawing.Point(179, 473);
+            this.btHome.Location = new System.Drawing.Point(28, 380);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(108, 29);
             this.btHome.TabIndex = 82;
@@ -233,7 +235,7 @@ namespace CollegeManagementSystem
             this.btDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDelete.ForeColor = System.Drawing.Color.White;
-            this.btDelete.Location = new System.Drawing.Point(179, 430);
+            this.btDelete.Location = new System.Drawing.Point(28, 337);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(108, 29);
             this.btDelete.TabIndex = 81;
@@ -246,7 +248,7 @@ namespace CollegeManagementSystem
             this.btAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdd.ForeColor = System.Drawing.Color.White;
-            this.btAdd.Location = new System.Drawing.Point(179, 388);
+            this.btAdd.Location = new System.Drawing.Point(28, 295);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(108, 29);
             this.btAdd.TabIndex = 79;
@@ -293,7 +295,6 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label6;

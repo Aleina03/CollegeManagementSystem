@@ -22,21 +22,63 @@ namespace CollegeManagementSystem
 
         private void Student_Load(object sender, EventArgs e)
         {
-            populate();
+            fillTheStudentTable();
         }
 
-        private void populate()
+        private void loadStudentTableData()
+        {
+            dbconnection.Open();
+            string querry = "SELECT * FROM StudentTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            dbconnection.Close();
+
+            var ds = new DataSet("Students");
+            sda.Fill(ds);
+
+            StdDGV.DataSource = ds.Tables[0];
+        }
+
+        private void fillTheStudentTable()
         {
 
-            /*     dbconnection.Open();
-                 string querry = "select * fromStudentTbl";
-                 SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
-                 SqlCommandBuilder builder = new SqlCommandBuilder(sda);
-                 var ds = new DataSet();
-                 sda.Fill(ds);
-                 StdDGV.DataSource = ds.Tables[0];
-                 dbconnection.Close();*/
+            loadStudentTableData();
 
+
+            StdDGV.Columns["StdFN"].HeaderText = "Fakultet nomer";
+
+            DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn();
+            deleteButton.HeaderText = "Action";
+            deleteButton.Name = "Delete";
+            deleteButton.Text = "Delete";
+            deleteButton.UseColumnTextForButtonValue = true;
+          
+            StdDGV.Columns.Add(deleteButton);
+
+         
+
+        }
+
+        private void StdDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (StdDGV.Columns[e.ColumnIndex].Name == "Delete")
+            {
+                // this will get the id of clicked delete button student id
+                int deleteStudentID = Convert.ToInt32(this.StdDGV.Rows[e.RowIndex].Cells[0].Value);
+
+                dbconnection.Open();
+                SqlCommand cmd = new SqlCommand("DELETE FROM StudentTbl WHERE StdId=@StdId", dbconnection);
+                cmd.Parameters.AddWithValue("@StdId", deleteStudentID); 
+                cmd.ExecuteNonQuery();
+                dbconnection.Close(); 
+
+                MessageBox.Show("Deleted.");
+
+                loadStudentTableData();
+
+            }
+            // This will show you the button name when you click
+           // MessageBox.Show(StdDGV.Columns[e.ColumnIndex].Name); 
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -53,7 +95,7 @@ namespace CollegeManagementSystem
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            try
+          /*  try
             {
                 if (tbId.Text == "")
                 {
@@ -66,14 +108,14 @@ namespace CollegeManagementSystem
                     SqlCommand cmd = new SqlCommand(query, dbconnection);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("User Deleted Successfully");
-                    dbconnection.Close();
-                    populate();
+                    dbconnection.Close(); 
+                    fillTheStudentTable();
                 }
             }
             catch
             {
                 MessageBox.Show("User Not Deleted");
-            }
+            }*/
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -95,7 +137,7 @@ namespace CollegeManagementSystem
 
                 cmd.Parameters.AddWithValue("@StdFN", tbFN.Text);
                 cmd.Parameters.AddWithValue("@StdName", tbName.Text);
-                cmd.Parameters.AddWithValue("@StdGender", cbGender.SelectedItem);
+                cmd.Parameters.AddWithValue("@StdGender", cbGender.Text); 
                 cmd.Parameters.AddWithValue("@StdPhone", tbPhone.Text); 
 
                 cmd.ExecuteNonQuery();
@@ -103,5 +145,13 @@ namespace CollegeManagementSystem
                 dbconnection.Close();
             }
         }
+
+        private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
+      
     }
 }
