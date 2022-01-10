@@ -28,14 +28,14 @@ namespace CollegeManagementSystem
         private void populate()
         {
 
-       /*     dbconnection.Open();
-            string querry = "select * fromStudentTbl";
-            SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
-            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
-            var ds = new DataSet();
-            sda.Fill(ds);
-            StdDGV.DataSource = ds.Tables[0];
-            dbconnection.Close();*/ 
+            /*     dbconnection.Open();
+                 string querry = "select * fromStudentTbl";
+                 SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
+                 SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+                 var ds = new DataSet();
+                 sda.Fill(ds);
+                 StdDGV.DataSource = ds.Tables[0];
+                 dbconnection.Close();*/
 
         }
 
@@ -83,24 +83,24 @@ namespace CollegeManagementSystem
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            try
+
+            if (tbFN.Text == "" || tbName.Text == "" || tbPhone.Text == "")
             {
-                if (tbId.Text == "" || tbName.Text == "" || tbPhone.Text == "")
-                {
-                    MessageBox.Show("Missing Information");
-                }
-                else
-                {
-                    dbconnection.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into StudentTbl values(" + tbId.Text + ",'" + tbName.Text + "','" + tbPhone.Text + "')", dbconnection);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Student Successfully Added");
-                    dbconnection.Close();
-                }
+                MessageBox.Show("Missing Information");
             }
-            catch
+            else
             {
-                MessageBox.Show("Something Went Wrong");
+                dbconnection.Open();
+                SqlCommand cmd = new SqlCommand("INSERT StudentTbl (StdFN,StdName,StdGender,StdPhone) VALUES(@StdFN,@StdName,@StdGender,@StdPhone)", dbconnection);
+
+                cmd.Parameters.AddWithValue("@StdFN", tbFN.Text);
+                cmd.Parameters.AddWithValue("@StdName", tbName.Text);
+                cmd.Parameters.AddWithValue("@StdGender", cbGender.SelectedItem);
+                cmd.Parameters.AddWithValue("@StdPhone", tbPhone.Text); 
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Student Successfully Added");
+                dbconnection.Close();
             }
         }
     }

@@ -34,8 +34,6 @@ namespace CollegeManagementSystem
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,8 +42,6 @@ namespace CollegeManagementSystem
             this.label8 = new System.Windows.Forms.Label();
             this.tbFN = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.tbAverage = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.StdDGV = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.btHome = new System.Windows.Forms.Button();
@@ -109,27 +105,6 @@ namespace CollegeManagementSystem
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1009, 18);
             this.panel2.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label4.Location = new System.Drawing.Point(46, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 19);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "ID";
-            // 
-            // tbId
-            // 
-            this.tbId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbId.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbId.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbId.Location = new System.Drawing.Point(116, 126);
-            this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(171, 19);
-            this.tbId.TabIndex = 5;
             // 
             // label5
             // 
@@ -219,28 +194,6 @@ namespace CollegeManagementSystem
             this.label9.TabIndex = 14;
             this.label9.Text = "Faculty №";
             // 
-            // tbAverage
-            // 
-            this.tbAverage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbAverage.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbAverage.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbAverage.Location = new System.Drawing.Point(116, 338);
-            this.tbAverage.Name = "tbAverage";
-            this.tbAverage.Size = new System.Drawing.Size(171, 19);
-            this.tbAverage.TabIndex = 17;
-            this.tbAverage.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label10.Location = new System.Drawing.Point(46, 338);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 19);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Average";
-            // 
             // StdDGV
             // 
             this.StdDGV.BackgroundColor = System.Drawing.SystemColors.Control;
@@ -311,8 +264,6 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.StdDGV);
-            this.Controls.Add(this.tbAverage);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.tbFN);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.tbPhone);
@@ -321,8 +272,6 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.tbId);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -344,7 +293,6 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbName;
@@ -354,8 +302,6 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbFN;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tbAverage;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView StdDGV;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btHome;
