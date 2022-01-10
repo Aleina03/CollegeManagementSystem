@@ -18,7 +18,7 @@ namespace CollegeManagementSystem
             InitializeComponent();
         }
 
-        SqlConnection myconn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelly\Documents\Collegedb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection dbconnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelly\Documents\Collegedb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -33,14 +33,14 @@ namespace CollegeManagementSystem
         private void populate()
         {
 
-             myconn.Open();
+            dbconnection.Open();
              string querry = "select * from UserTbl";
-             SqlDataAdapter sda = new SqlDataAdapter(querry, myconn);
+             SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
              SqlCommandBuilder builder = new SqlCommandBuilder(sda);
              var ds = new DataSet();
              sda.Fill(ds);
              UserDGV.DataSource = ds.Tables[0];
-             myconn.Close(); 
+            dbconnection.Close(); 
              
         }
 
@@ -69,11 +69,12 @@ namespace CollegeManagementSystem
                 }
                 else
                 {
-                    myconn.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into UserTbl values(" + UIdTb.Text + ",'" + UNameTb.Text + "','" + UPasswordTb.Text + "','" + cbRole.SelectedItem + "' )", myconn);
+                    dbconnection.Open();
+                    SqlCommand cmd = new SqlCommand("Insert into UserTbl values(" + UIdTb.Text + ",'" + UNameTb.Text + "','" + UPasswordTb.Text + "','" + cbRole.SelectedItem + "' )", dbconnection);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("User Successfully Added");
-                    myconn.Close();
+                    dbconnection.Close();
+                    populate();
                 }
             }
             catch

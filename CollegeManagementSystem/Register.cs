@@ -58,9 +58,9 @@ namespace CollegeManagementSystem
                 else
                 {
                     dbconnection.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into TeacherTbl values(" + tbFn.Text + ",'" + tbName.Text + "','" + cbMarks.SelectedItem + "','"+ cbSub.SelectedItem+"')", dbconnection);
+                    SqlCommand cmd = new SqlCommand("Insert into RegistrerTbl values(" + tbFn.Text + ",'" + tbName.Text + "','" + cbMarks.SelectedItem + "','"+ cbSub.SelectedItem+"')", dbconnection);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Fees Successfully Added");
+                    MessageBox.Show("Mark Successfully Added");
                     dbconnection.Close();
                 }
             }
