@@ -43,7 +43,12 @@ namespace CollegeManagementSystem
 
             RegDGV.DataSource = ds.Tables[0];
 
-            RegDGV.Columns["StdFN"].HeaderText = "Fakultet nomer";
+            RegDGV.Columns["StdFN"].HeaderText = "Faculty №";
+            RegDGV.Columns["StdName"].HeaderText = "Name Family";
+            RegDGV.Columns["Period"].HeaderText = "Gender";
+            RegDGV.Columns["Mark"].HeaderText = "Mark";
+            RegDGV.Columns["Subject"].HeaderText = "Sudject";
+
         }
 
         private void fillTheRegisterTable()

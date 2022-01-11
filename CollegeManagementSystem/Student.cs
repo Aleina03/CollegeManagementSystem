@@ -39,7 +39,10 @@ namespace CollegeManagementSystem
 
             StdDGV.DataSource = ds.Tables[0];
 
-            StdDGV.Columns["StdFN"].HeaderText = "Fakultet nomer"; 
+            StdDGV.Columns["StdFN"].HeaderText = "Faculty №";
+            StdDGV.Columns["StdName"].HeaderText = "Name Family";
+            StdDGV.Columns["StdGender"].HeaderText = "Gender";
+            StdDGV.Columns["StdPhone"].HeaderText = "Phone";
         }
 
         private void fillTheStudentTable()
@@ -83,6 +86,20 @@ namespace CollegeManagementSystem
                 }
             // This will show you the button name when you click
             // MessageBox.Show(StdDGV.Columns[e.ColumnIndex].Name); 
+        }
+
+        private void ClearTable(DataTable StudentTbl)
+        {
+            try
+            {
+                StudentTbl.Clear();
+            }
+            catch (DataException e)
+            {
+                // Process exception and return.
+                Console.WriteLine("Exception of type {0} occurred.",
+                    e.GetType());
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)

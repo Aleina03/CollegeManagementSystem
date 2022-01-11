@@ -35,6 +35,7 @@ namespace CollegeManagementSystem
             DataView DV = new DataView(dbdataset);
             Dv.RowFilter = string.Format("Faculty Nomer LIKE '%{0}%'", btSearch);
             InformDGV.DataSource = DV;
+            da svyrjem Registertbl
              */
         }
 
