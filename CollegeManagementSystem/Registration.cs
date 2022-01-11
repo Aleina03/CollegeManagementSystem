@@ -47,7 +47,7 @@ namespace CollegeManagementSystem
             {
                 if (inputPassword.Text == inputConfirmPassword.Text)
                 {
-                    var cmd = new SqlCommand("select * from UserTbl where UserName='" + inputUsername.Text + "'", this.dbconnection);
+                    var cmd = new SqlCommand("select * from UsersTbl where UserName='" + inputUsername.Text + "'", this.dbconnection);
                     var dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
@@ -58,7 +58,7 @@ namespace CollegeManagementSystem
                     {
                         dr.Close();
 
-                        cmd = new SqlCommand("INSERT INTO UserTbl (UserName, Password) Values('" + inputUsername.Text + "', '" + inputPassword.Text + "')", this.dbconnection);
+                        cmd = new SqlCommand("INSERT INTO UsersTbl (UserName, Password) Values('" + inputUsername.Text + "', '" + inputPassword.Text + "')", this.dbconnection);
                         cmd.ExecuteNonQuery();      
 
                         MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
