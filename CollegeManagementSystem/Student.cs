@@ -88,20 +88,6 @@ namespace CollegeManagementSystem
             // MessageBox.Show(StdDGV.Columns[e.ColumnIndex].Name); 
         }
 
-        private void ClearTable(DataTable StudentTbl)
-        {
-            try
-            {
-                StudentTbl.Clear();
-            }
-            catch (DataException e)
-            {
-                // Process exception and return.
-                Console.WriteLine("Exception of type {0} occurred.",
-                    e.GetType());
-            }
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -150,7 +136,12 @@ namespace CollegeManagementSystem
 
         }
 
-       
-      
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+             /*DataTable addtogv = (DataTable)ViewState["records"];
+             addtogv.Rows.Clear();
+             ViewState["records"] = addtogv;
+            */
+        }
     }
 }

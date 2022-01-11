@@ -177,7 +177,7 @@ namespace CollegeManagementSystem
             this.label2.TabIndex = 19;
             this.label2.Text = "Confirm Password";
             // 
-            // Register
+            // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,7 +195,7 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbUserName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Register";
+            this.Name = "Registration";
             this.Text = "Register";
             this.Load += new System.EventHandler(this.Registration_load);
             this.panel2.ResumeLayout(false);

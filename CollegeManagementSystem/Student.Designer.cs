@@ -46,6 +46,7 @@ namespace CollegeManagementSystem
             this.label11 = new System.Windows.Forms.Label();
             this.btHome = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StdDGV)).BeginInit();
             this.SuspendLayout();
@@ -242,11 +243,24 @@ namespace CollegeManagementSystem
             this.btAdd.UseVisualStyleBackColor = false;
             this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClear.Location = new System.Drawing.Point(319, 508);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 83;
+            this.btnClear.Text = "Clear Data";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 572);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btHome);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.label11);
@@ -293,5 +307,6 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btAdd;
+        private System.Windows.Forms.Button btnClear;
     }
 }
