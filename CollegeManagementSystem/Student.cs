@@ -96,31 +96,6 @@ namespace CollegeManagementSystem
             mainForm.Show();
         }
 
-        private void btDelete_Click(object sender, EventArgs e)
-        {
-          /*  try
-            {
-                if (tbId.Text == "")
-                {
-                    MessageBox.Show("Enter The User Id");
-                }
-                else
-                {
-                    dbconnection.Open();
-                    string query = "delete from UserTbl where UserId=" + tbId.Text + ";";
-                    SqlCommand cmd = new SqlCommand(query, dbconnection);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("User Deleted Successfully");
-                    dbconnection.Close(); 
-                    fillTheStudentTable();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("User Not Deleted");
-            }*/
-        }
-
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 

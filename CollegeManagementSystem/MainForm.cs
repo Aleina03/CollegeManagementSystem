@@ -58,7 +58,16 @@ namespace CollegeManagementSystem
 
         private void btLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            Login loginForm = new Login();
+            loginForm.Show();
+        }
+
+        private void btInformation_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Information informForm = new Information();
+            informForm.Show();
         }
     }
 }

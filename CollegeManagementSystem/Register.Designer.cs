@@ -38,19 +38,16 @@ namespace CollegeManagementSystem
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.RegDGV = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
             this.btHome = new System.Windows.Forms.Button();
-            this.btDelete = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbFn = new System.Windows.Forms.TextBox();
-            this.tbId = new System.Windows.Forms.TextBox();
             this.cbSub = new System.Windows.Forms.ComboBox();
             this.cbMarks = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RegDGV)).BeginInit();
             this.SuspendLayout();
@@ -106,7 +103,7 @@ namespace CollegeManagementSystem
             this.tbAmount.AutoSize = true;
             this.tbAmount.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbAmount.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbAmount.Location = new System.Drawing.Point(44, 315);
+            this.tbAmount.Location = new System.Drawing.Point(12, 303);
             this.tbAmount.Name = "tbAmount";
             this.tbAmount.Size = new System.Drawing.Size(45, 19);
             this.tbAmount.TabIndex = 45;
@@ -117,7 +114,7 @@ namespace CollegeManagementSystem
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label7.Location = new System.Drawing.Point(44, 267);
+            this.label7.Location = new System.Drawing.Point(12, 255);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 19);
             this.label7.TabIndex = 44;
@@ -127,7 +124,7 @@ namespace CollegeManagementSystem
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePicker1.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Location = new System.Drawing.Point(114, 264);
+            this.dateTimePicker1.Location = new System.Drawing.Point(114, 252);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(171, 22);
             this.dateTimePicker1.TabIndex = 43;
@@ -137,7 +134,7 @@ namespace CollegeManagementSystem
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(44, 214);
+            this.label6.Location = new System.Drawing.Point(12, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 19);
             this.label6.TabIndex = 41;
@@ -148,28 +145,17 @@ namespace CollegeManagementSystem
             this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbName.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbName.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbName.Location = new System.Drawing.Point(114, 214);
+            this.tbName.Location = new System.Drawing.Point(114, 202);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(171, 19);
             this.tbName.TabIndex = 40;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(44, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 19);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "Id";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label4.Location = new System.Drawing.Point(44, 173);
+            this.label4.Location = new System.Drawing.Point(13, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 19);
             this.label4.TabIndex = 37;
@@ -179,29 +165,18 @@ namespace CollegeManagementSystem
             // 
             this.RegDGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.RegDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RegDGV.Location = new System.Drawing.Point(470, 165);
+            this.RegDGV.Location = new System.Drawing.Point(319, 162);
             this.RegDGV.Name = "RegDGV";
             this.RegDGV.RowTemplate.Height = 25;
-            this.RegDGV.Size = new System.Drawing.Size(462, 344);
+            this.RegDGV.Size = new System.Drawing.Size(661, 344);
             this.RegDGV.TabIndex = 56;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label11.Location = new System.Drawing.Point(470, 122);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(91, 25);
-            this.label11.TabIndex = 55;
-            this.label11.Text = "Register";
             // 
             // btHome
             // 
             this.btHome.BackColor = System.Drawing.Color.SteelBlue;
             this.btHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btHome.ForeColor = System.Drawing.Color.White;
-            this.btHome.Location = new System.Drawing.Point(177, 480);
+            this.btHome.Location = new System.Drawing.Point(177, 477);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(108, 29);
             this.btHome.TabIndex = 82;
@@ -209,25 +184,12 @@ namespace CollegeManagementSystem
             this.btHome.UseVisualStyleBackColor = false;
             this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
-            // btDelete
-            // 
-            this.btDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDelete.ForeColor = System.Drawing.Color.White;
-            this.btDelete.Location = new System.Drawing.Point(177, 437);
-            this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(108, 29);
-            this.btDelete.TabIndex = 81;
-            this.btDelete.Text = "Delete";
-            this.btDelete.UseVisualStyleBackColor = false;
-            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
-            // 
             // btAdd
             // 
             this.btAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdd.ForeColor = System.Drawing.Color.White;
-            this.btAdd.Location = new System.Drawing.Point(177, 395);
+            this.btAdd.Location = new System.Drawing.Point(177, 432);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(108, 29);
             this.btAdd.TabIndex = 79;
@@ -240,7 +202,7 @@ namespace CollegeManagementSystem
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label8.Location = new System.Drawing.Point(44, 353);
+            this.label8.Location = new System.Drawing.Point(12, 341);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 19);
             this.label8.TabIndex = 83;
@@ -260,20 +222,10 @@ namespace CollegeManagementSystem
             this.tbFn.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFn.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbFn.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbFn.Location = new System.Drawing.Point(132, 174);
+            this.tbFn.Location = new System.Drawing.Point(115, 162);
             this.tbFn.Name = "tbFn";
-            this.tbFn.Size = new System.Drawing.Size(153, 19);
+            this.tbFn.Size = new System.Drawing.Size(171, 19);
             this.tbFn.TabIndex = 38;
-            // 
-            // tbId
-            // 
-            this.tbId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbId.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbId.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbId.Location = new System.Drawing.Point(132, 132);
-            this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(153, 19);
-            this.tbId.TabIndex = 86;
             // 
             // cbSub
             // 
@@ -296,7 +248,7 @@ namespace CollegeManagementSystem
             "Framework systems for web programming",
             "Information technology on the Internet",
             "Business information systems"});
-            this.cbSub.Location = new System.Drawing.Point(113, 349);
+            this.cbSub.Location = new System.Drawing.Point(113, 338);
             this.cbSub.Name = "cbSub";
             this.cbSub.Size = new System.Drawing.Size(172, 22);
             this.cbSub.TabIndex = 87;
@@ -311,32 +263,40 @@ namespace CollegeManagementSystem
             "4",
             "5",
             "6"});
-            this.cbMarks.Location = new System.Drawing.Point(113, 312);
+            this.cbMarks.Location = new System.Drawing.Point(113, 300);
             this.cbMarks.Name = "cbMarks";
             this.cbMarks.Size = new System.Drawing.Size(172, 22);
             this.cbMarks.TabIndex = 88;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label5.Location = new System.Drawing.Point(319, 143);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.TabIndex = 89;
+            this.label5.Text = "Register";
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 572);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cbMarks);
             this.Controls.Add(this.cbSub);
-            this.Controls.Add(this.tbId);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btHome);
-            this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.RegDGV);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.tbAmount);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbName);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.tbFn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
@@ -363,18 +323,15 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbName;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView RegDGV;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btHome;
-        private System.Windows.Forms.Button btDelete;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox tbFn;
-        private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.ComboBox cbSub;
         private System.Windows.Forms.ComboBox cbMarks;
+        private System.Windows.Forms.Label label5;
     }
 }
