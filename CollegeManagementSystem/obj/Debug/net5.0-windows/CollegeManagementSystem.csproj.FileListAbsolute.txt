@@ -51,7 +51,6 @@ C:\Users\Nelly\Source\Repos\Aleina03\CollegeManagementSystem\CollegeManagementSy
 C:\Users\Nelly\Source\Repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem.Register.resources
 C:\Users\Nelly\Source\Repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem.Student.resources
 C:\Users\Nelly\Source\Repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem.Teachers.resources
-C:\Users\Nelly\Source\Repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem.Users.resources
 C:\Users\Nelly\Source\Repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem.csproj.GenerateResource.cache
 C:\Users\Nelly\Source\Repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Nelly\Source\Repos\Aleina03\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net5.0-windows\CollegeManagementSystem.AssemblyInfoInputs.cache

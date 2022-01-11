@@ -18,6 +18,7 @@ namespace CollegeManagementSystem
         {
             InitializeComponent();
         }
+
         SqlConnection dbconnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelly\Documents\Collegedb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void Student_Load(object sender, EventArgs e)

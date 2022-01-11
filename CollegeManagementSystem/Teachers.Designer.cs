@@ -233,7 +233,9 @@ namespace CollegeManagementSystem
             // 
             // cbSpeciality
             // 
-            this.cbSpeciality.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbSpeciality.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbSpeciality.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbSpeciality.ForeColor = System.Drawing.Color.SteelBlue;
             this.cbSpeciality.FormattingEnabled = true;
             this.cbSpeciality.Items.AddRange(new object[] {
             "Information Technology",
@@ -252,10 +254,10 @@ namespace CollegeManagementSystem
             "Framework systems for web programming",
             "Information technology on the Internet",
             "Business information systems"});
-            this.cbSpeciality.Location = new System.Drawing.Point(114, 284);
+            this.cbSpeciality.Location = new System.Drawing.Point(115, 280);
             this.cbSpeciality.Name = "cbSpeciality";
-            this.cbSpeciality.Size = new System.Drawing.Size(172, 22);
-            this.cbSpeciality.TabIndex = 88;
+            this.cbSpeciality.Size = new System.Drawing.Size(171, 26);
+            this.cbSpeciality.TabIndex = 89;
             // 
             // Teachers
             // 

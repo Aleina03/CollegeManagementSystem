@@ -35,7 +35,7 @@ namespace CollegeManagementSystem
             this.label1 = new System.Windows.Forms.Label();
             this.tbAmount = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtPeriod = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,9 +44,9 @@ namespace CollegeManagementSystem
             this.btAdd = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tbFn = new System.Windows.Forms.TextBox();
+            this.tbFN = new System.Windows.Forms.TextBox();
             this.cbSub = new System.Windows.Forms.ComboBox();
-            this.cbMarks = new System.Windows.Forms.ComboBox();
+            this.cbMark = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RegDGV)).BeginInit();
@@ -120,14 +120,14 @@ namespace CollegeManagementSystem
             this.label7.TabIndex = 44;
             this.label7.Text = "Period";
             // 
-            // dateTimePicker1
+            // dtPeriod
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Location = new System.Drawing.Point(114, 252);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(171, 22);
-            this.dateTimePicker1.TabIndex = 43;
+            this.dtPeriod.CalendarFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtPeriod.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtPeriod.Location = new System.Drawing.Point(114, 252);
+            this.dtPeriod.Name = "dtPeriod";
+            this.dtPeriod.Size = new System.Drawing.Size(171, 22);
+            this.dtPeriod.TabIndex = 43;
             // 
             // label6
             // 
@@ -170,6 +170,7 @@ namespace CollegeManagementSystem
             this.RegDGV.RowTemplate.Height = 25;
             this.RegDGV.Size = new System.Drawing.Size(661, 344);
             this.RegDGV.TabIndex = 56;
+            this.RegDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RegDGV_CellContentClick);
             // 
             // btHome
             // 
@@ -202,7 +203,7 @@ namespace CollegeManagementSystem
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label8.Location = new System.Drawing.Point(12, 341);
+            this.label8.Location = new System.Drawing.Point(12, 348);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 19);
             this.label8.TabIndex = 83;
@@ -217,15 +218,15 @@ namespace CollegeManagementSystem
             this.panel2.Size = new System.Drawing.Size(1009, 18);
             this.panel2.TabIndex = 85;
             // 
-            // tbFn
+            // tbFN
             // 
-            this.tbFn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbFn.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbFn.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbFn.Location = new System.Drawing.Point(115, 162);
-            this.tbFn.Name = "tbFn";
-            this.tbFn.Size = new System.Drawing.Size(171, 19);
-            this.tbFn.TabIndex = 38;
+            this.tbFN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbFN.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbFN.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbFN.Location = new System.Drawing.Point(115, 162);
+            this.tbFN.Name = "tbFN";
+            this.tbFN.Size = new System.Drawing.Size(171, 19);
+            this.tbFN.TabIndex = 38;
             // 
             // cbSub
             // 
@@ -248,25 +249,25 @@ namespace CollegeManagementSystem
             "Framework systems for web programming",
             "Information technology on the Internet",
             "Business information systems"});
-            this.cbSub.Location = new System.Drawing.Point(113, 338);
+            this.cbSub.Location = new System.Drawing.Point(113, 345);
             this.cbSub.Name = "cbSub";
             this.cbSub.Size = new System.Drawing.Size(172, 22);
             this.cbSub.TabIndex = 87;
             // 
-            // cbMarks
+            // cbMark
             // 
-            this.cbMarks.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbMarks.FormattingEnabled = true;
-            this.cbMarks.Items.AddRange(new object[] {
+            this.cbMark.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbMark.FormattingEnabled = true;
+            this.cbMark.Items.AddRange(new object[] {
             "2",
             "3",
             "4",
             "5",
             "6"});
-            this.cbMarks.Location = new System.Drawing.Point(113, 300);
-            this.cbMarks.Name = "cbMarks";
-            this.cbMarks.Size = new System.Drawing.Size(172, 22);
-            this.cbMarks.TabIndex = 88;
+            this.cbMark.Location = new System.Drawing.Point(113, 300);
+            this.cbMark.Name = "cbMark";
+            this.cbMark.Size = new System.Drawing.Size(172, 22);
+            this.cbMark.TabIndex = 88;
             // 
             // label5
             // 
@@ -285,7 +286,7 @@ namespace CollegeManagementSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 572);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cbMarks);
+            this.Controls.Add(this.cbMark);
             this.Controls.Add(this.cbSub);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label8);
@@ -294,10 +295,10 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.RegDGV);
             this.Controls.Add(this.tbAmount);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtPeriod);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbName);
-            this.Controls.Add(this.tbFn);
+            this.Controls.Add(this.tbFN);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -320,7 +321,7 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label tbAmount;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtPeriod;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label4;
@@ -329,9 +330,9 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox tbFn;
+        private System.Windows.Forms.TextBox tbFN;
         private System.Windows.Forms.ComboBox cbSub;
-        private System.Windows.Forms.ComboBox cbMarks;
+        private System.Windows.Forms.ComboBox cbMark;
         private System.Windows.Forms.Label label5;
     }
 }
