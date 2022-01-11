@@ -28,8 +28,5 @@
     <Compile Update="Teachers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Users.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

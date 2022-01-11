@@ -38,7 +38,6 @@ namespace CollegeManagementSystem
             this.btRegister = new System.Windows.Forms.Button();
             this.btLogout = new System.Windows.Forms.Button();
             this.btInformation = new System.Windows.Forms.Button();
-            this.btUsers = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,7 +120,7 @@ namespace CollegeManagementSystem
             // 
             // btLogout
             // 
-            this.btLogout.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btLogout.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLogout.ForeColor = System.Drawing.Color.White;
             this.btLogout.Location = new System.Drawing.Point(360, 431);
@@ -146,20 +145,6 @@ namespace CollegeManagementSystem
             this.btInformation.UseVisualStyleBackColor = false;
             this.btInformation.Click += new System.EventHandler(this.btInformation_Click);
             // 
-            // btUsers
-            // 
-            this.btUsers.BackColor = System.Drawing.Color.SteelBlue;
-            this.btUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btUsers.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btUsers.ForeColor = System.Drawing.Color.White;
-            this.btUsers.Location = new System.Drawing.Point(21, 403);
-            this.btUsers.Name = "btUsers";
-            this.btUsers.Size = new System.Drawing.Size(196, 43);
-            this.btUsers.TabIndex = 5;
-            this.btUsers.Text = "Users";
-            this.btUsers.UseVisualStyleBackColor = false;
-            this.btUsers.Click += new System.EventHandler(this.btUsers_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -169,7 +154,6 @@ namespace CollegeManagementSystem
             this.ClientSize = new System.Drawing.Size(847, 506);
             this.Controls.Add(this.btInformation);
             this.Controls.Add(this.btLogout);
-            this.Controls.Add(this.btUsers);
             this.Controls.Add(this.btRegister);
             this.Controls.Add(this.btTeacher);
             this.Controls.Add(this.btStudent);
@@ -193,6 +177,5 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Button btLogout;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btInformation;
-        private System.Windows.Forms.Button btUsers;
     }
 }

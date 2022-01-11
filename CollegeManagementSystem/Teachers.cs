@@ -32,31 +32,6 @@ namespace CollegeManagementSystem
             mainForm.Show();
         }
 
-        private void btDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (tbId.Text == "")
-                {
-                    MessageBox.Show("Enter The User Id");
-                }
-                else
-                {
-                    dbconnection.Open();
-                    string query = "delete from TeacherTbl where TeacherId=" + tbId.Text + ";";
-                    SqlCommand cmd = new SqlCommand(query, dbconnection);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("User Deleted Successfully");
-                    dbconnection.Close();
-                    populate();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("User Not Deleted");
-            }
-        }
-
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -64,43 +39,92 @@ namespace CollegeManagementSystem
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            try
+            if (tbName.Text == "" || cbGender.Text == "" || tbPhone.Text == "" || cbSpeciality.Text== "")
             {
-                if (tbId.Text == "" || tbName.Text == "" || tbPhone.Text == "")
-                {
-                    MessageBox.Show("Missing Information");
-                }
-                else
-                {
-                    dbconnection.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into TeacherTbl values('" + tbId.Text + "','" + tbName.Text + "','" + tbPhone.Text + "')", dbconnection);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Teacher Successfully Added");
-                    dbconnection.Close();
-                }
+                MessageBox.Show("Missing Information");
             }
-            catch
+            else
             {
-                MessageBox.Show("Something Went Wrong");
+                dbconnection.Open();
+                SqlCommand cmd = new SqlCommand("INSERT TeacherTbl (TeacherName,TeacherGender,TeacherPhone,TeacherSpeciality) VALUES(@TeacherName,@TeacherGender,@TeacherPhone,@TeacherSpeciality)", dbconnection);
+
+                cmd.Parameters.AddWithValue("@TeacherName", tbName.Text);
+                cmd.Parameters.AddWithValue("@TeacherGender", cbGender.Text);
+                cmd.Parameters.AddWithValue("@TeacherPhone", tbPhone.Text);
+                cmd.Parameters.AddWithValue("@TeacherSpeciality", cbSpeciality.Text);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Teacher Successfully Added");
+                dbconnection.Close();
+
+
+                loadTeacherTableData();
             }
         }
 
         private void Teachers_Load(object sender, EventArgs e)
         {
-            populate();
+            fillTheTeacherTable();
         }
-        private void populate()
-        {
 
+        private void loadTeacherTableData()
+        {
             dbconnection.Open();
-            string querry = "select * from TeacherTbl";
+            string querry = "SELECT * FROM TeacherTbl";
             SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
-            var ds = new DataSet();
-            sda.Fill(ds);
-            TeacherDGV.DataSource = ds.Tables[0];
             dbconnection.Close();
 
+            var ds = new DataSet("Teachers");
+            sda.Fill(ds);
+
+            TeacherDGV.DataSource = ds.Tables[0];
+
+            TeacherDGV.Columns["TeacherName"].HeaderText = "Teacher Name";
+        }
+
+        private void fillTheTeacherTable()
+        {
+
+            loadTeacherTableData();
+
+            DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn();
+            deleteButton.HeaderText = "Action";
+            deleteButton.Name = "Delete";
+            deleteButton.Text = "Delete";
+            deleteButton.UseColumnTextForButtonValue = true;
+
+            TeacherDGV.Columns.Add(deleteButton);
+
+        }
+
+        private void TeacherDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (TeacherDGV.Columns[e.ColumnIndex].Name == "Delete")
+
+            {
+                try
+                {
+                    int deleteTeacherId = Convert.ToInt32(TeacherDGV.Rows[e.RowIndex].Cells[0].Value);
+
+                    dbconnection.Open();
+                    SqlCommand cmd = new SqlCommand("DELETE FROM TeacherTbl WHERE TeacherId=@TeacherId", dbconnection);
+                    cmd.Parameters.AddWithValue("@TeacherId", deleteTeacherId);
+                    cmd.ExecuteNonQuery();
+                    dbconnection.Close();
+
+                    MessageBox.Show("Deleted.");
+
+                    fillTheTeacherTable();
+
+                    this.Hide();
+                    Teachers teachertForm = new Teachers();
+                    teachertForm.Show();
+                }
+                catch { }
+            }
+            // This will show you the button name when you click
+            // MessageBox.Show(StdDGV.Columns[e.ColumnIndex].Name); 
         }
     }
 }

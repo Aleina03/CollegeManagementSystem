@@ -29,11 +29,12 @@ namespace CollegeManagementSystem
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            dbconnection.Open();
+           /* dbconnection.Open();
             SqlCommand cmd = new SqlCommand("delete from InformTbl where StdId ='" + tbId.Text + "'", dbconnection);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Mark Deleted Successfully.");
             dbconnection.Close();
+            */
         }
 
         private void btSearch_Click(object sender, EventArgs e)

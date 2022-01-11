@@ -49,13 +49,6 @@ namespace CollegeManagementSystem
             marksForm.Show();
         }
 
-        private void btUsers_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Users usersForm = new Users();
-            usersForm.Show();
-        }
-
         private void btLogout_Click(object sender, EventArgs e)
         {
             this.Hide();
