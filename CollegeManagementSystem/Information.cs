@@ -31,12 +31,7 @@ namespace CollegeManagementSystem
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            /*
-            DataView DV = new DataView(dbdataset);
-            Dv.RowFilter = string.Format("Faculty Nomer LIKE '%{0}%'", btSearch);
-            InformDGV.DataSource = DV;
-            da svyrjem Registertbl
-             */
+            
         }
 
         private void Information_Load(object sender, EventArgs e)
@@ -44,5 +39,9 @@ namespace CollegeManagementSystem
            
         }
 
+        private void InformDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

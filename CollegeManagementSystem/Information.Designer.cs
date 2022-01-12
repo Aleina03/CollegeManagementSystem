@@ -37,8 +37,6 @@ namespace CollegeManagementSystem
             this.InformDGV = new System.Windows.Forms.DataGridView();
             this.btHome = new System.Windows.Forms.Button();
             this.btSearch = new System.Windows.Forms.Button();
-            this.stdName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.stdFN = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -109,6 +107,7 @@ namespace CollegeManagementSystem
             this.InformDGV.RowTemplate.Height = 25;
             this.InformDGV.Size = new System.Drawing.Size(661, 344);
             this.InformDGV.TabIndex = 39;
+            this.InformDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.InformDGV_CellContentClick);
             // 
             // btHome
             // 
@@ -135,27 +134,6 @@ namespace CollegeManagementSystem
             this.btSearch.Text = "Search";
             this.btSearch.UseVisualStyleBackColor = false;
             this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
-            // 
-            // stdName
-            // 
-            this.stdName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.stdName.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.stdName.ForeColor = System.Drawing.Color.SteelBlue;
-            this.stdName.Location = new System.Drawing.Point(115, 202);
-            this.stdName.Name = "stdName";
-            this.stdName.Size = new System.Drawing.Size(171, 19);
-            this.stdName.TabIndex = 94;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(13, 201);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 19);
-            this.label5.TabIndex = 93;
-            this.label5.Text = "Name";
             // 
             // stdFN
             // 
@@ -197,8 +175,6 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.label11);
             this.Controls.Add(this.stdFN);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.stdName);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.btHome);
             this.Controls.Add(this.btSearch);
             this.Controls.Add(this.InformDGV);
@@ -226,8 +202,6 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.DataGridView InformDGV;
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btSearch;
-        private System.Windows.Forms.TextBox stdName;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox stdFN;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
