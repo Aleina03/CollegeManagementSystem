@@ -77,6 +77,7 @@ namespace CollegeManagementSystem
             this.label2.Size = new System.Drawing.Size(27, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -127,7 +128,7 @@ namespace CollegeManagementSystem
             this.btSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSearch.ForeColor = System.Drawing.Color.White;
-            this.btSearch.Location = new System.Drawing.Point(178, 433);
+            this.btSearch.Location = new System.Drawing.Point(178, 199);
             this.btSearch.Name = "btSearch";
             this.btSearch.Size = new System.Drawing.Size(108, 29);
             this.btSearch.TabIndex = 88;
@@ -144,6 +145,8 @@ namespace CollegeManagementSystem
             this.stdFN.Name = "stdFN";
             this.stdFN.Size = new System.Drawing.Size(171, 19);
             this.stdFN.TabIndex = 100;
+            this.stdFN.TextChanged += new System.EventHandler(this.stdFN_TextChanged);
+            this.stdFN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.stdFN_KeyPress);
             // 
             // label8
             // 
@@ -182,6 +185,7 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Information";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Information";
             this.Load += new System.EventHandler(this.Information_Load);
             this.panel1.ResumeLayout(false);

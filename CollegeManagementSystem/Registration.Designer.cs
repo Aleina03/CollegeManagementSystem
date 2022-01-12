@@ -196,6 +196,7 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.lbUserName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.Load += new System.EventHandler(this.Registration_load);
             this.panel2.ResumeLayout(false);

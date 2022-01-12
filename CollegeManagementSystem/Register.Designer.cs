@@ -303,6 +303,7 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fees";
             this.Load += new System.EventHandler(this.Register_Load_1);
             this.panel1.ResumeLayout(false);

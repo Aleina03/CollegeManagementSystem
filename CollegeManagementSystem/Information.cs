@@ -27,49 +27,55 @@ namespace CollegeManagementSystem
             mainForm.Show();
         }
 
-        public static Register marksForm = new Register();
-
-
         private void btSearch_Click(object sender, EventArgs e)
         {
-           /* try
-            {
-                using (SqlConnection dbconnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelly\Documents\Collegedb.mdf;Integrated Security=True;Connect Timeout=30"));
-                var cmd = new SqlCommand("select * from RegisterTbl where StdFN='" + stdFN.Text + "'", this.dbconnection);
-                var dr = cmd.ExecuteReader();
-                {
-                    if (dbconnection.State == ConnectionState.Closed)
-                        dbconnection.Open();
-                    using(DataTable dt = new DataTable("Information"))
-                    {
-                        using (cmd = new SqlCommand("select * from RegisterTbl where StdId=@StdId", dbconnection)) ;
-                        {
-                            cmd.Parameters.AddWithValue("StdFN", stdFN.Text);
-                            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                            adapter.Fill(dt);
-                            InformDGV.DataSource = dt;
-                            stdFN.Text = $"Information about student: {InformDGV.RowCount}";
-                        }
 
-                    }
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            string searchString = stdFN.Text;
 
-            }
-           */
+            dbconnection.Open();
+            string querry = "SELECT * FROM RegisterTbl WHERE StdFN=@StdFN";
+            SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
+            sda.SelectCommand.Parameters.AddWithValue("@StdFN", searchString);
+
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+
+            dbconnection.Close(); 
+
+            var ds = new DataSet("Register");
+            sda.Fill(ds);
+
+            InformDGV.DataSource = ds.Tables[0];
+
+            InformDGV.Columns["StdFN"].HeaderText = "Faculty №";
+            InformDGV.Columns["StdName"].HeaderText = "Name Family";
+            InformDGV.Columns["Period"].HeaderText = "Period";
+            InformDGV.Columns["Mark"].HeaderText = "Mark";
+            InformDGV.Columns["Subject"].HeaderText = "Sudject";
+
         }
 
         private void Information_Load(object sender, EventArgs e)
         {
-           
-        }
 
+        }
         private void InformDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void stdFN_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void stdFN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)//enter
+                btSearch.PerformClick();
         }
     }
 }
