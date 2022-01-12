@@ -136,12 +136,5 @@ namespace CollegeManagementSystem
 
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-             /*DataTable addtogv = (DataTable)ViewState["records"];
-             addtogv.Rows.Clear();
-             ViewState["records"] = addtogv;
-            */
-        }
     }
 }

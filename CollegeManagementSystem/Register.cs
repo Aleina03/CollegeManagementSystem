@@ -19,21 +19,18 @@ namespace CollegeManagementSystem
             InitializeComponent();
         }
 
-        SqlConnection dbconnection;
+        SqlConnection dbconnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelly\Documents\Collegedb.mdf;Integrated Security=True;Connect Timeout=30");
 
 
         private void Register_Load_1(object sender, EventArgs e)
         {
             fillTheRegisterTable();
-
-            dbconnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\NELLY\DOCUMENTS\COLLEGEDB.MDF;Integrated Security=True");
-            dbconnection.Open();
         }
 
         private void loadRegisterTableData()
         {
             dbconnection.Open();
-            string querry = "SELECT * FROM RegistertTbl";
+            string querry = "SELECT * FROM RegisterTbl";
             SqlDataAdapter sda = new SqlDataAdapter(querry, dbconnection);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             dbconnection.Close();
@@ -45,7 +42,7 @@ namespace CollegeManagementSystem
 
             RegDGV.Columns["StdFN"].HeaderText = "Faculty №";
             RegDGV.Columns["StdName"].HeaderText = "Name Family";
-            RegDGV.Columns["Period"].HeaderText = "Gender";
+            RegDGV.Columns["Period"].HeaderText = "Period";
             RegDGV.Columns["Mark"].HeaderText = "Mark";
             RegDGV.Columns["Subject"].HeaderText = "Sudject";
 
