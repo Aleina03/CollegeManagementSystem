@@ -176,10 +176,11 @@ namespace CollegeManagementSystem
             // averageMarkLabelText
             // 
             this.averageMarkLabelText.AutoSize = true;
-            this.averageMarkLabelText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.averageMarkLabelText.Location = new System.Drawing.Point(178, 280);
+            this.averageMarkLabelText.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.averageMarkLabelText.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.averageMarkLabelText.Location = new System.Drawing.Point(174, 251);
             this.averageMarkLabelText.Name = "averageMarkLabelText";
-            this.averageMarkLabelText.Size = new System.Drawing.Size(128, 25);
+            this.averageMarkLabelText.Size = new System.Drawing.Size(112, 19);
             this.averageMarkLabelText.TabIndex = 102;
             this.averageMarkLabelText.Text = "Average mark";
             this.averageMarkLabelText.Visible = false;
@@ -188,11 +189,11 @@ namespace CollegeManagementSystem
             // averageMarkLabel
             // 
             this.averageMarkLabel.AutoSize = true;
-            this.averageMarkLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.averageMarkLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.averageMarkLabel.Location = new System.Drawing.Point(215, 316);
+            this.averageMarkLabel.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.averageMarkLabel.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.averageMarkLabel.Location = new System.Drawing.Point(240, 286);
             this.averageMarkLabel.Name = "averageMarkLabel";
-            this.averageMarkLabel.Size = new System.Drawing.Size(49, 28);
+            this.averageMarkLabel.Size = new System.Drawing.Size(46, 24);
             this.averageMarkLabel.TabIndex = 103;
             this.averageMarkLabel.Text = "0.00";
             this.averageMarkLabel.Visible = false;

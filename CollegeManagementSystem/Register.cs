@@ -80,17 +80,16 @@ namespace CollegeManagementSystem
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            if (tbFN.Text == "" || tbName.Text == "" || dtPeriod.Text == "" || cbMark.Text == "" || cbSub.Text == "")
+            if (tbFN.Text == "" || dtPeriod.Text == "" || cbMark.Text == "" || cbSub.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
             else
             {
                 dbconnection.Open();
-                SqlCommand cmd = new SqlCommand("INSERT RegisterTbl (StdFN,StdName,Period,Mark,Subject) VALUES(@StdFN,@StdName,@Period,@Mark,@Subject)", dbconnection);
+                SqlCommand cmd = new SqlCommand("INSERT RegisterTbl (StdFN,Period,Mark,Subject) VALUES(@StdFN,@Period,@Mark,@Subject)", dbconnection);
 
                 cmd.Parameters.AddWithValue("@StdFN", tbFN.Text);
-                cmd.Parameters.AddWithValue("@StdName", tbName.Text);
                 cmd.Parameters.AddWithValue("@Period", dtPeriod.Text);
                 cmd.Parameters.AddWithValue("@Mark", cbMark.Text);
                 cmd.Parameters.AddWithValue("@Subject", cbSub.Text);
