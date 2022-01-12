@@ -21,6 +21,7 @@ namespace CollegeManagementSystem
 
         SqlConnection dbconnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelly\Documents\Collegedb.mdf;Integrated Security=True;Connect Timeout=30");
 
+        public static object stdFN { get; internal set; }
 
         private void Register_Load_1(object sender, EventArgs e)
         {
