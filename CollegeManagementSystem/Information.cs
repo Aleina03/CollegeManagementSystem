@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace CollegeManagementSystem
 {
@@ -39,10 +40,25 @@ namespace CollegeManagementSystem
 
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
 
-            dbconnection.Close(); 
+            dbconnection.Close();
 
             var ds = new DataSet("Register");
             sda.Fill(ds);
+
+            averageMarkLabelText.Visible = true;
+            averageMarkLabel.Visible = true;
+            averageMarkLabel.Text = "0.00";
+
+            double sumAllMarks = 0;
+            int marksCount = 0;
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                marksCount++;
+                double studentMark = (double) row["Mark"];
+                sumAllMarks = sumAllMarks + studentMark;
+            }
+            double studentAverageMark = (sumAllMarks / marksCount);
+            averageMarkLabel.Text = Math.Round(studentAverageMark,2).ToString();
 
             InformDGV.DataSource = ds.Tables[0];
 
@@ -76,6 +92,21 @@ namespace CollegeManagementSystem
         {
             if (e.KeyChar == (char)13)//enter
                 btSearch.PerformClick();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

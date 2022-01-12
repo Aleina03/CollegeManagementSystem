@@ -163,6 +163,9 @@ namespace CollegeManagementSystem
             // 
             // RegDGV
             // 
+            this.RegDGV.AllowUserToAddRows = false;
+            this.RegDGV.AllowUserToResizeColumns = false;
+            this.RegDGV.AllowUserToResizeRows = false;
             this.RegDGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.RegDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RegDGV.Location = new System.Drawing.Point(319, 162);

@@ -40,6 +40,8 @@ namespace CollegeManagementSystem
             this.stdFN = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.averageMarkLabelText = new System.Windows.Forms.Label();
+            this.averageMarkLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InformDGV)).BeginInit();
             this.SuspendLayout();
@@ -169,12 +171,40 @@ namespace CollegeManagementSystem
             this.label11.Size = new System.Drawing.Size(110, 16);
             this.label11.TabIndex = 101;
             this.label11.Text = "Information About";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // averageMarkLabelText
+            // 
+            this.averageMarkLabelText.AutoSize = true;
+            this.averageMarkLabelText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.averageMarkLabelText.Location = new System.Drawing.Point(178, 280);
+            this.averageMarkLabelText.Name = "averageMarkLabelText";
+            this.averageMarkLabelText.Size = new System.Drawing.Size(128, 25);
+            this.averageMarkLabelText.TabIndex = 102;
+            this.averageMarkLabelText.Text = "Average mark";
+            this.averageMarkLabelText.Visible = false;
+            this.averageMarkLabelText.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // averageMarkLabel
+            // 
+            this.averageMarkLabel.AutoSize = true;
+            this.averageMarkLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.averageMarkLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.averageMarkLabel.Location = new System.Drawing.Point(215, 316);
+            this.averageMarkLabel.Name = "averageMarkLabel";
+            this.averageMarkLabel.Size = new System.Drawing.Size(49, 28);
+            this.averageMarkLabel.TabIndex = 103;
+            this.averageMarkLabel.Text = "0.00";
+            this.averageMarkLabel.Visible = false;
+            this.averageMarkLabel.Click += new System.EventHandler(this.label5_Click);
             // 
             // Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 572);
+            this.Controls.Add(this.averageMarkLabel);
+            this.Controls.Add(this.averageMarkLabelText);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.stdFN);
             this.Controls.Add(this.label8);
@@ -209,5 +239,7 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.TextBox stdFN;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label averageMarkLabelText;
+        private System.Windows.Forms.Label averageMarkLabel;
     }
 }
