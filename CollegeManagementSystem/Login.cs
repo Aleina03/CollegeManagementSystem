@@ -27,9 +27,30 @@ namespace CollegeManagementSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            if (inputPassword.Text != string.Empty || inputUsername.Text != string.Empty)
+            {
+
+                var cmd = new SqlCommand("select * from UsersTbl where inputUsername='" + inputUsername.Text + "'", this.dbconnection);
+                var dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    dr.Close();
+                    this.Hide();
+                    MainForm mainForm = new MainForm();
+                    mainForm.Show();
+                }
+                else
+                {
+                    dr.Close();
+                    MessageBox.Show("No Account avilable with this username and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void tbUserName_TextChanged(object sender, EventArgs e)
@@ -71,8 +92,8 @@ namespace CollegeManagementSystem
 
         private void lbClear_Click(object sender, EventArgs e)
         {
-            tbUserName.Text = "";
-            tbPassword.Text = "";
+            inputUsername.Text = "";
+            inputPassword.Text = "";
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

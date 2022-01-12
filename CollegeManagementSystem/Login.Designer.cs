@@ -35,8 +35,8 @@ namespace CollegeManagementSystem
             this.label1 = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
             this.lbPassword = new System.Windows.Forms.Label();
-            this.tbUserName = new System.Windows.Forms.TextBox();
-            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.inputUsername = new System.Windows.Forms.TextBox();
+            this.inputPassword = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lbClear = new System.Windows.Forms.Label();
@@ -100,22 +100,22 @@ namespace CollegeManagementSystem
             this.lbPassword.Text = "Password";
             this.lbPassword.Click += new System.EventHandler(this.lbPassword_Click);
             // 
-            // tbUserName
+            // inputUsername
             // 
-            this.tbUserName.Location = new System.Drawing.Point(30, 153);
-            this.tbUserName.Name = "tbUserName";
-            this.tbUserName.PlaceholderText = "Enter your username";
-            this.tbUserName.Size = new System.Drawing.Size(193, 23);
-            this.tbUserName.TabIndex = 4;
-            this.tbUserName.TextChanged += new System.EventHandler(this.tbUserName_TextChanged);
+            this.inputUsername.Location = new System.Drawing.Point(30, 153);
+            this.inputUsername.Name = "inputUsername";
+            this.inputUsername.PlaceholderText = "Enter your username";
+            this.inputUsername.Size = new System.Drawing.Size(193, 23);
+            this.inputUsername.TabIndex = 4;
+            this.inputUsername.TextChanged += new System.EventHandler(this.tbUserName_TextChanged);
             // 
-            // tbPassword
+            // inputPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(30, 204);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(193, 23);
-            this.tbPassword.TabIndex = 5;
-            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
+            this.inputPassword.Location = new System.Drawing.Point(30, 204);
+            this.inputPassword.Name = "inputPassword";
+            this.inputPassword.Size = new System.Drawing.Size(193, 23);
+            this.inputPassword.TabIndex = 5;
+            this.inputPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
             // pictureBox1
             // 
@@ -174,8 +174,8 @@ namespace CollegeManagementSystem
             this.Controls.Add(this.lbClear);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.tbPassword);
-            this.Controls.Add(this.tbUserName);
+            this.Controls.Add(this.inputPassword);
+            this.Controls.Add(this.inputUsername);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbUserName);
             this.Controls.Add(this.panel2);
@@ -200,8 +200,8 @@ namespace CollegeManagementSystem
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbUserName;
         private System.Windows.Forms.Label lbPassword;
-        private System.Windows.Forms.TextBox tbUserName;
-        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.TextBox inputUsername;
+        private System.Windows.Forms.TextBox inputPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lbClear;

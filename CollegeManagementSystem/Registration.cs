@@ -61,7 +61,7 @@ namespace CollegeManagementSystem
                         cmd = new SqlCommand("INSERT INTO UsersTbl (inputUsername, inputPassword) Values('" + inputUsername.Text + "', '" + inputPassword.Text + "')", this.dbconnection);
                         cmd.ExecuteNonQuery();      
 
-                        MessageBox.Show("Your Account is created.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Your Account is created. Please Login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
@@ -75,8 +75,8 @@ namespace CollegeManagementSystem
             }
 
             this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            Login login = new Login();
+            login.Show();
         }
 
         private void inputUsername_TextChanged(object sender, EventArgs e)
