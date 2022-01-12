@@ -122,6 +122,7 @@ namespace CollegeManagementSystem
             // 
             this.dtPeriod.CalendarFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtPeriod.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtPeriod.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtPeriod.Location = new System.Drawing.Point(114, 208);
             this.dtPeriod.Name = "dtPeriod";
             this.dtPeriod.Size = new System.Drawing.Size(171, 22);
@@ -217,7 +218,6 @@ namespace CollegeManagementSystem
             "Introduction to programming",
             "Linear algebra and analytical geometry",
             "Creating a GPI (C #)",
-            "Students will receive an invitation in their university emails",
             "Mathematics software systems",
             "English",
             "Geometric design",

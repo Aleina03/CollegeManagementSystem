@@ -38,7 +38,7 @@ namespace CollegeManagementSystem
             sda.Fill(ds);
 
             StdDGV.DataSource = ds.Tables[0];
-
+            StdDGV.Columns["StdId"].Visible = false;
             StdDGV.Columns["StdFN"].HeaderText = "Faculty №";
             StdDGV.Columns["StdName"].HeaderText = "Name Family";
             StdDGV.Columns["StdGender"].HeaderText = "Gender";

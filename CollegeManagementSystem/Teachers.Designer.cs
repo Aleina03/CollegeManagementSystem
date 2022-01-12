@@ -242,7 +242,6 @@ namespace CollegeManagementSystem
             "Introduction to programming",
             "Linear algebra and analytical geometry",
             "Creating a GPI (C #)",
-            "Students will receive an invitation in their university emails",
             "Mathematics software systems",
             "English",
             "Geometric design",

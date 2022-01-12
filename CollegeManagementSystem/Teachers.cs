@@ -80,6 +80,7 @@ namespace CollegeManagementSystem
 
             TeacherDGV.DataSource = ds.Tables[0];
 
+            TeacherDGV.Columns["TeacherId"].Visible = false;
             TeacherDGV.Columns["TeacherName"].HeaderText = "Teacher Name";
             TeacherDGV.Columns["TeacherGender"].HeaderText = "Gender";
             TeacherDGV.Columns["TeacherPhone"].HeaderText = "Phone";

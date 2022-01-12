@@ -62,8 +62,8 @@ namespace CollegeManagementSystem
 
             InformDGV.DataSource = ds.Tables[0];
 
-            InformDGV.Columns["StdFN"].HeaderText = "Faculty №";
-            InformDGV.Columns["StdName"].HeaderText = "Name Family";
+            InformDGV.Columns["StdId"].Visible = false;
+            InformDGV.Columns["StdFN"].Visible = false;
             InformDGV.Columns["Period"].HeaderText = "Period";
             InformDGV.Columns["Mark"].HeaderText = "Mark";
             InformDGV.Columns["Subject"].HeaderText = "Sudject";

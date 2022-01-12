@@ -41,12 +41,11 @@ namespace CollegeManagementSystem
 
             RegDGV.DataSource = ds.Tables[0];
 
+            RegDGV.Columns["StdId"].Visible = false;
             RegDGV.Columns["StdFN"].HeaderText = "Faculty №";
-            RegDGV.Columns["StdName"].HeaderText = "Name Family";
             RegDGV.Columns["Period"].HeaderText = "Period";
             RegDGV.Columns["Mark"].HeaderText = "Mark";
             RegDGV.Columns["Subject"].HeaderText = "Sudject";
-
         }
 
         private void fillTheRegisterTable()
@@ -112,11 +111,11 @@ namespace CollegeManagementSystem
             {
                 try
                 {
-                    int deleteStudentID = Convert.ToInt32(RegDGV.Rows[e.RowIndex].Cells[0].Value);
+                    int deleteStudentFN = Convert.ToInt32(RegDGV.Rows[e.RowIndex].Cells[0].Value);
 
                     dbconnection.Open();
-                    SqlCommand cmd = new SqlCommand("DELETE FROM RegisterTbl WHERE StdId=@StdId", dbconnection);
-                    cmd.Parameters.AddWithValue("@StdId", deleteStudentID);
+                    SqlCommand cmd = new SqlCommand("DELETE FROM RegisterTbl WHERE StdFN=@StdFN", dbconnection);
+                    cmd.Parameters.AddWithValue("@StdFN", deleteStudentFN);
                     cmd.ExecuteNonQuery();
                     dbconnection.Close();
 
