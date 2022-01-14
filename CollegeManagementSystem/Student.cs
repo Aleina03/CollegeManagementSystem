@@ -23,7 +23,8 @@ namespace CollegeManagementSystem
 
         private void Student_Load(object sender, EventArgs e)
         {
-            fillTheStudentTable(); 
+            fillTheStudentTable();
+            bindCustomer();
         }
 
         private void loadStudentTableData()
@@ -55,9 +56,27 @@ namespace CollegeManagementSystem
             deleteButton.Name = "Delete";
             deleteButton.Text = "Delete";
             deleteButton.UseColumnTextForButtonValue = true;
-          
-            StdDGV.Columns.Add(deleteButton);
 
+            StdDGV.Columns.Add(deleteButton);
+        }
+
+        private void bindCustomer()
+        {
+            DataGridViewButtonColumn editButon = new DataGridViewButtonColumn();
+            editButon.HeaderText = "Action";
+            editButon.Name = "Edit";
+            editButon.Text = "Edit";
+            editButon.UseColumnTextForButtonValue = true;
+
+            StdDGV.Columns.Add(editButon);
+
+            if(StdDGV.Columns.Contains(editButon.Name="Edit"))
+            {
+            }
+            else
+            {
+                StdDGV.Columns.Add(editButon);
+            }
         }
 
         private void StdDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -83,9 +102,10 @@ namespace CollegeManagementSystem
                     Student studentForm = new Student();
                     studentForm.Show();
                 } catch { }
-                }
+            }
             // This will show you the button name when you click
             // MessageBox.Show(StdDGV.Columns[e.ColumnIndex].Name); 
+
         }
 
         private void label2_Click(object sender, EventArgs e)
